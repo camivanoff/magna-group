@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   contenedor.innerHTML = viajes.map((v) => {
-    const img = (v.imagenes && v.imagenes[0]) ? v.imagenes[0] : "img/grupal1.jpeg";
+    const img = (v.imagenes && v.imagenes[0]) ? v.imagenes[0] : "/img/grupal1.jpeg";
     const precio = (typeof v.precio === "number") ? v.precio.toLocaleString("es-UY") : v.precio;
 
     return `
@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <p class="card__text">${escapeHtml(v.duracion || "")} · Salida ${escapeHtml(v.salida || "")}</p>
         </div>
         <div class="card__footer">
-          <a class="card__btn" href="viaje.html?id=${encodeURIComponent(v.id)}">Consultar</a>
-          <span class="card__price">USD ${escapeHtml(String(precio ?? ""))}</span>
+            <a class="card__btn" href="/viaje.html?id=${encodeURIComponent(v.id)}">Consultar</a>
+            <span class="card__price">USD ${escapeHtml(String(precio ?? ""))}</span>
         </div>
       </article>
     `;

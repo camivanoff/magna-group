@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet"/>
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
@@ -17,18 +17,18 @@
   <!-- ================= HEADER ================= -->
   <header class="topbar">
     <nav class="navbar" aria-label="Navegación principal">
-      <a href="index.html" class="logo" aria-label="Ir al inicio">
+      <a href="/index.html" class="logo" aria-label="Ir al inicio">
         <span class="logo__box">
-          <img src="img/logo-blanco.png" alt="MAGNA GROUP" class="logo__img">
+          <img src="/img/logo-blanco.png" alt="MAGNA GROUP" class="logo__img">
         </span>
       </a>
 
       <ul class="menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="grupales.html">Grupales</a></li>
-        <li><a href="tienda.html">Tienda</a></li>
-        <li><a href="experiencias.html">Experiencias</a></li>
-        <li><a href="cotizacion.html">Cotizá tu viaje</a></li>
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/grupales.html">Grupales</a></li>
+        <li><a href="/tienda.html">Tienda</a></li>
+        <li><a href="/experiencias.html">Experiencias</a></li>
+        <li><a href="/cotizacion.html">Cotizá tu viaje</a></li>
       </ul>
     </nav>
   </header>
@@ -45,8 +45,17 @@
     <section class="cards" aria-label="Acciones">
       <a id="pdfLink" class="card__btn" href="#" target="_blank" rel="noopener">Descargar itinerario</a>
       <a id="whatsappLink" class="card__btn" href="#" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+
       <div class="card__footer">
         <span id="viajePrecio" class="card__price"></span>
+      </div>
+    </section>
+
+    <!-- ✅ ACA VA LA TARJETA NEGRA (resumen) -->
+    <section class="about" aria-label="Resumen del viaje">
+      <div class="about__content">
+        <div id="viaje-resumen"></div>
+        <p id="viaje-debug" style="color:#b00020;font-weight:600;"></p>
       </div>
     </section>
 
@@ -62,7 +71,9 @@
     <section class="about" aria-label="Qué incluye">
       <div class="about__content">
         <h2 class="about__content_tittle">¿Qué incluye?</h2>
-        <ul id="incluyeList"></ul>
+
+        <!-- ✅ ESTE ID ES EL QUE ESPERA viajes.js -->
+        <ul id="viaje-incluye"></ul>
       </div>
     </section>
 
@@ -73,21 +84,22 @@
       <p class="footer__text">Seguinos en nuestras redes</p>
       <div class="footer__socials">
         <a href="https://www.instagram.com/travelvip.uy" target="_blank" rel="noopener noreferrer">
-          <img src="img/instagram.svg" alt="Instagram" />
+          <img src="/img/instagram.svg" alt="Instagram" />
         </a>
         <a href="https://www.tiktok.com/@travelvip.uy" target="_blank" rel="noopener noreferrer">
-          <img src="img/tiktok.svg" alt="TikTok" />
+          <img src="/img/tiktok.svg" alt="TikTok" />
         </a>
         <a href="https://www.facebook.com/travelviptellevaadondequieras" target="_blank" rel="noopener noreferrer">
-          <img src="img/facebook.svg" alt="Facebook" />
+          <img src="/img/facebook.svg" alt="Facebook" />
         </a>
       </div>
       <p class="footer__copy">© 2026 MAGNA GROUP</p>
     </div>
   </footer>
 
-<script defer src="/js/viajes-data.js"></script>
-<script defer src="/js/grupales.js"></script>
+  <!-- ✅ ORDEN CORRECTO: data primero, luego el render del detalle -->
+  <script defer src="/js/viajes-data.js"></script>
+  <script defer src="/js/viajes.js"></script>
 
 </body>
 </html>

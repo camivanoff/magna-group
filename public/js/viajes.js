@@ -1,83 +1,68 @@
-(() => {
-  // 1) Leer ?id=...
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get("id");
-
-  // 2) Validaciones
-  if (!id) {
-    console.error("Falta el parámetro ?id en la URL");
-    return;
+(function () {
+  function moneyUSD(n) {
+    const num = Number(n);
+    if (!Number.isFinite(num)) return "";
+    return `USD ${num.toLocaleString("es-UY")}`;
   }
 
-  if (!window.VIAJES || !Array.isArray(window.VIAJES)) {
-    console.error("window.VIAJES no está cargado. Revisá el orden de scripts en viaje.html");
-    return;
+  function getViajeIdFromUrl() {
+    const params = new URLSearchParams(location.search);
+    return (params.get("id") || location.hash.replace("#", "") || "").trim();
   }
 
-  // 3) Buscar viaje por id
-  const viaje = window.VIAJES.find(v => v.id === id);
+  function renderViajeSeguro() {
+    const debugEl = document.getElementById("viaje-debug");
+    const incluyeEl = document.getElementById("viaje-incluye");
+    const resumenEl = document.getElementById("viaje-resumen");
 
-  if (!viaje) {
-    console.error("No existe viaje con id:", id);
-    return;
-  }
-
-  // Helpers DOM
-  const $ = (sel) => document.querySelector(sel);
-
-  // 4) Pintar datos (IDs esperados en el HTML)
-  const tituloEl = $("#viajeTitulo");
-  const metaEl = $("#viajeMeta");
-  const descEl = $("#viajeDescripcion");
-  const precioEl = $("#viajePrecio");
-  const incluyeEl = $("#incluyeList");
-  const pdfEl = $("#pdfLink");
-  const waEl = $("#whatsappLink");
-  const sliderEl = $("#viajeSlider");
-
-  if (tituloEl) tituloEl.textContent = viaje.titulo || "";
-  if (metaEl) metaEl.textContent = `${viaje.duracion || ""}${viaje.salida ? " · Salida " + viaje.salida : ""}`.trim();
-  if (descEl) descEl.textContent = viaje.descripcion || "";
-  if (precioEl) precioEl.textContent = viaje.precio ? `USD ${Number(viaje.precio).toLocaleString("es-UY")}` : "";
-
-  // Incluye
-  if (incluyeEl) {
-    incluyeEl.innerHTML = "";
-    (viaje.incluye || []).forEach(item => {
-      const li = document.createElement("li");
-      li.textContent = item;
-      incluyeEl.appendChild(li);
-    });
-  }
-
-  // PDF
-  if (pdfEl) {
-    if (viaje.pdf) {
-      pdfEl.href = viaje.pdf;
-      pdfEl.setAttribute("download", "");
-      pdfEl.style.display = "";
-    } else {
-      pdfEl.style.display = "none";
+    // Validar contenedores
+    if (!incluyeEl || !resumenEl) {
+      if (debugEl) debugEl.textContent = "Falta #viaje-incluye o #viaje-resumen en el HTML.";
+      console.error("Faltan contenedores del detalle:", { incluyeEl, resumenEl });
+      return;
     }
+
+    // Validar data
+    const viajes = window.VIAJES;
+    if (!Array.isArray(viajes) || viajes.length === 0) {
+      if (debugEl) debugEl.textContent = "No se cargó la data de viajes (window.VIAJES).";
+      console.error("window.VIAJES no disponible:", viajes);
+      return;
+    }
+
+    const id = getViajeIdFromUrl();
+    const viaje = viajes.find(v => v.id === id) || viajes[0];
+
+    if (debugEl) {
+      debugEl.textContent = id
+        ? (viaje ? "" : `No encontré el id "${id}". Mostrando el primer viaje.`)
+        : "No vino ?id=... en la URL. Mostrando el primer viaje.";
+    }
+
+    // RENDER RESUMEN (tu “cuadradillo negro”)
+    resumenEl.innerHTML = `
+      <div style="background:#111;color:#fff;padding:16px;border-radius:14px;max-width:360px">
+        <div style="font-size:14px;opacity:.9">Duración</div>
+        <div style="font-size:20px;font-weight:700">${viaje.duracion || "-"}</div>
+        <div style="margin-top:10px;font-size:14px;opacity:.9">Salida</div>
+        <div style="font-size:16px;font-weight:600">${viaje.salida || "-"}</div>
+        <div style="margin-top:10px;font-size:14px;opacity:.9">Precio</div>
+        <div style="font-size:18px;font-weight:700">${moneyUSD(viaje.precio) || "-"}</div>
+      </div>
+    `;
+
+    // RENDER INCLUYE
+    const items = Array.isArray(viaje.incluye) ? viaje.incluye : [];
+    incluyeEl.innerHTML = items.length
+      ? items.map(x => `<li>${x}</li>`).join("")
+      : "<li>Consultá por WhatsApp para el detalle completo.</li>";
+
+    console.log("✅ Detalle renderizado:", { idDetectado: id, viajeUsado: viaje.id });
   }
 
-  // WhatsApp
-  if (waEl) {
-    const text = encodeURIComponent(viaje.whatsappText || `Hola! Quiero consultar por el viaje: ${viaje.titulo}`);
-    // Poné tu número real con código país (sin + ni espacios) Ej: 5989XXXXXXX
-    const phone = "59800000000";
-    waEl.href = `https://wa.me/${phone}?text=${text}`;
-  }
+  // Ejecutar cuando el DOM esté listo
+  document.addEventListener("DOMContentLoaded", renderViajeSeguro);
 
-  // Slider / imágenes
-  if (sliderEl) {
-    sliderEl.innerHTML = "";
-    (viaje.imagenes || []).forEach((src, i) => {
-      const img = document.createElement("img");
-      img.src = src.startsWith("/") ? src : `/${src.replace(/^\/?/, "")}`;
-      img.alt = `${viaje.titulo} ${i + 1}`;
-      img.loading = "lazy";
-      sliderEl.appendChild(img);
-    });
-  }
+  // Exponer para que puedas forzar desde consola si querés
+  window.renderViajeSeguro = renderViajeSeguro;
 })();
