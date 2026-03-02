@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Viaje – MAGNA GROUP</title>
+  <title>Detalle del viaje – MAGNA GROUP</title>
 
-  <!-- Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet"/>
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -34,70 +33,44 @@
     </nav>
   </header>
 
-  <!-- ================= HERO GALLERY ================= -->
-  <section class="viaje-hero">
-    <div class="viaje-gallery" data-viaje-gallery></div>
-  </section>
+  <main class="catalog">
 
-  <!-- ================= CONTENIDO ================= -->
-  <main class="page viaje-layout">
+    <h1 id="viajeTitulo" class="catalog__title">Detalle del viaje</h1>
+    <p id="viajeMeta" class="catalog__subtitle"></p>
 
-    <!-- Encabezado izquierda -->
-    <header class="viaje-header">
-      <h1 class="page__title" data-viaje-titulo></h1>
-      <p class="page__subtitle" data-viaje-subtitulo></p>
-    </header>
+    <!-- Galería simple -->
+    <section id="viajeSlider" class="cards" aria-label="Imágenes del viaje"></section>
 
-    <!-- Columna izquierda -->
-    <section class="viaje-layout__main">
-
-      <section class="viaje-text">
-
-        <!-- Descripción -->
-        <p class="viaje-desc" data-viaje-descripcion></p>
-
-        <!-- Incluye -->
-        <h2 class="viaje-h2">¿Qué incluye?</h2>
-        <ul class="viaje-list" data-viaje-incluye></ul>
-
-      </section>
-
-      <!-- Botones -->
-      <section class="viaje-actions" aria-label="Acciones del viaje">
-
-        <a class="card__btn" data-viaje-pdf download>
-          Descargar itinerario
-        </a>
-
-        <a class="card__btn viaje__btn-wpp"
-           data-viaje-wpp
-           target="_blank"
-           rel="noopener noreferrer">
-          Consultar por WhatsApp
-        </a>
-
-      </section>
-
+    <!-- Botones -->
+    <section class="cards" aria-label="Acciones">
+      <a id="pdfLink" class="card__btn" href="#" target="_blank" rel="noopener">Descargar itinerario</a>
+      <a id="whatsappLink" class="card__btn" href="#" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      <div class="card__footer">
+        <span id="viajePrecio" class="card__price"></span>
+      </div>
     </section>
 
-    <!-- Columna derecha -->
-    <aside class="viaje-layout__sidebar">
-      <div class="viaje-box">
-        <h3 class="viaje-box__title">Detalles del viaje</h3>
-
-        <p class="viaje-box__meta" data-viaje-subtitulo-box></p>
-
-        <div class="viaje-box__price" data-viaje-precio></div>
+    <!-- Descripción -->
+    <section class="about" aria-label="Descripción del viaje">
+      <div class="about__content">
+        <h2 class="about__content_tittle">Detalles del viaje</h2>
+        <p id="viajeDescripcion"></p>
       </div>
-    </aside>
+    </section>
+
+    <!-- Incluye -->
+    <section class="about" aria-label="Qué incluye">
+      <div class="about__content">
+        <h2 class="about__content_tittle">¿Qué incluye?</h2>
+        <ul id="incluyeList"></ul>
+      </div>
+    </section>
 
   </main>
 
-  <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="footer__content">
       <p class="footer__text">Seguinos en nuestras redes</p>
-
       <div class="footer__socials">
         <a href="https://www.instagram.com/travelvip.uy" target="_blank" rel="noopener noreferrer">
           <img src="img/instagram.svg" alt="Instagram" />
@@ -109,13 +82,13 @@
           <img src="img/facebook.svg" alt="Facebook" />
         </a>
       </div>
-
       <p class="footer__copy">© 2026 MAGNA GROUP</p>
     </div>
   </footer>
 
-  <!-- JS -->
-  <script src="./js/viajes.js"></script>
+  <!-- ✅ ORDEN IMPORTANTE -->
+<script src="js/viajes-data.js"></script>
+<script src="js/viaje.js"></script>
 
 </body>
 </html>
