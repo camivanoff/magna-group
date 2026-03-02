@@ -1,6 +1,6 @@
 // public/js/viajes-data.js
 
-const viajes = [
+window.VIAJES = [
   {
     id: "japon",
     titulo: "Japón",
@@ -210,5 +210,3 @@ const viajes = [
     whatsappText: "Hola! Quiero consultar por el viaje a Tesoros Milenarios."
   }
 ];
-
-window.VIAJES = viajes;
