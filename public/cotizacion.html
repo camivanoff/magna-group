@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cotizá tu viaje – MAGNA GROUP</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ================= HEADER / NAV ================= -->
+  <header class="topbar">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a href="index.html" class="logo" aria-label="Ir al inicio">
+          <img src="img/logo-blanco.png" alt="MAGNA GROUP">
+      </a>
+
+
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="grupales.html">Grupales</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="experiencias.html">Experiencias</a></li>
+        <li><a href="cotizacion.html" aria-current="page">Cotizá tu viaje</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= FORMULARIO ================= -->
+  <main>
+    <section class="form-section" aria-label="Formulario de cotización">
+      <h1>Cotizá tu viaje</h1>
+      <p class="form-subtitle">
+        Contanos qué tipo de viaje estás buscando y te respondemos a la brevedad.
+      </p>
+
+      <!-- Sin backend: action="#" está ok para la entrega frontend -->
+      <form class="travel-form" action="#" method="post">
+
+        <div class="form-group">
+          <label for="nombre">Nombre y apellido</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Ej: Ana Pérez"
+            autocomplete="name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="ejemplo@mail.com"
+            autocomplete="email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="telefono">Teléfono / WhatsApp</label>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="Ej: +598 9xxxxxxx"
+            autocomplete="tel"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="tipo">Tipo de viaje</label>
+          <select id="tipo" name="tipo" required>
+            <option value="">Seleccioná una opción</option>
+            <option value="grupal">Viaje grupal</option>
+            <option value="terrestre">Viaje terrestre</option>
+            <option value="medida">Viaje a medida</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="destino">Destino de interés</label>
+          <input
+            type="text"
+            id="destino"
+            name="destino"
+            placeholder="Ej: Japón, Caribe, Europa…"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Contanos un poco más</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="5"
+            placeholder="Fechas estimadas, cantidad de personas, presupuesto, preferencias, etc."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="form-btn">Enviar consulta</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer__content">
+      <p class="footer__text">Seguinos en nuestras redes</p>
+
+      <div class="footer__socials">
+        <a href="https://www.instagram.com/travelvip.uy" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="img/instagram.svg" alt="Instagram" />
+        </a>
+
+        <a href="https://www.tiktok.com/@travelvip.uy" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <img src="img/tiktok.svg" alt="TikTok" />
+        </a>
+
+        <a href="https://www.facebook.com/travelviptellevaadondequieras" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <img src="img/facebook.svg" alt="Facebook" />
+        </a>
+      </div>
+
+      <p class="footer__copy">© 2026 MAGNA GROUP</p>
+    </div>
+  </footer>
+
+</body>
+</html>

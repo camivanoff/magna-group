@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAGNA GROUP</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ================= HEADER / NAV ================= -->
+  <header class="topbar">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a href="index.html" class="logo" aria-label="Ir al inicio">
+          <img src="/img/logo-blanco.png" alt="MAGNA GROUP">
+      </a>
+
+
+
+      <ul class="menu">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="grupales.html">Grupales</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="experiencias.html">Experiencias</a></li>
+        <li><a href="cotizacion.html">Cotizá tu viaje</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="sr-only">MAGNA GROUP</h1>
+
+<!-- ================= HERO (Carrusel CSS sin JS) ================= -->
+<section class="hero" aria-label="Carrusel principal">
+  <div class="hero__slider" role="region" aria-roledescription="carousel" aria-label="Destinos destacados">
+
+    <!-- Slide 1 -->
+    <article class="hero__slide hero__slide--1" aria-label="Vacaciones de setiembre">
+      <img class="hero__img" src="img/slide-vacaciones-setiembre.jpeg" alt="Destino 1" />
+      <div class="hero__overlay">
+        <p class="hero__kicker">Vacaciones de setiembre</p>
+        <h2 class="hero__title">Elegí tu próxima escapada</h2>
+        <a class="hero__btn" href="destinos.html">Ver destinos</a>
+      </div>
+    </article>
+
+    <!-- Slide 2 -->
+    <article class="hero__slide hero__slide--2" aria-label="Temporada baja">
+      <img class="hero__img" src="img/slide-temporada-baja.jpeg" alt="Destino 2" />
+      <div class="hero__overlay">
+        <p class="hero__kicker">Temporada baja</p>
+        <h2 class="hero__title">Más calma, mejores oportunidades</h2>
+        <a class="hero__btn" href="cotizacion.html">Cotizar</a>
+      </div>
+    </article>
+
+    <!-- Slide 3 -->
+    <article class="hero__slide hero__slide--3" aria-label="Vacaciones de Julio">
+      <img class="hero__img" src="img/slide-vacaciones-julio.jpeg" alt="Destino 3" />
+      <div class="hero__overlay">
+        <p class="hero__kicker">Vacaciones de Julio</p>
+        <h2 class="hero__title">Experiencias que valen la pena</h2>
+        <a class="hero__btn" href="grupales.html">ver</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about" aria-label="Sobre la empresa">
+      <div class="about__content">
+        <h2 class="about__content_tittle">Sobre MAGNA GROUP</h2>
+        <p>
+          En MAGNA GROUP diseñamos experiencias de viaje pensadas para quienes buscan
+          recorrer el mundo con tranquilidad, organización y acompañamiento.
+        </p>
+        <p>
+          Trabajamos con viajes grupales, terrestres y propuestas a medida,
+          cuidando cada detalle para que viajar sea disfrutar.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= SEGMENTOS / CARDS ================= -->
+    <section class="segments" aria-label="Propuestas de viaje">
+      <div class="segments__grid">
+
+        <!-- Card 1 -->
+        <article class="segment-card" style="background-image: url('img/carrusel1.jpg');">
+          <div class="segment-card__overlay">
+            <h3 class="segment-card__title">Viajes grupales</h3>
+            <p class="segment-card__text">+45</p>
+            <a class="segment-card__btn" href="grupales.html">Conocé más</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="segment-card" style="background-image: url('img/andamundos.jpg');">
+          <div class="segment-card__overlay">
+            <h3 class="segment-card__title">Experiencias</h3>
+            <p class="segment-card__text">Viajes grupales (20 a 35 años)</p>
+            <a class="segment-card__btn" href="experiencias.html">Conocé más</a>
+          </div>
+        </article>
+
+        <!-- Card grande (ocupa 2 columnas) -->
+        <article class="segment-card segment-card--wide" style="background-image: url('img/carrusel.jpg');">
+          <div class="segment-card__overlay">
+            <p class="segment-card__kicker">Armá tu viaje</p>
+            <h3 class="segment-card__title">El mundo en tus manos</h3>
+            <p class="segment-card__text">Vos hacés la maleta, nosotros el viaje perfecto</p>
+            <a class="segment-card__btn" href="cotizacion.html">Conocé más</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ================= GRUPALES DESTACADOS ================= -->
+<section class="featured-trips" aria-label="Viajes grupales destacados">
+
+  <h2 class="featured-trips__title">Circuitos que te pueden interesar</h2>
+
+  <div class="featured-trips__grid">
+
+    <a href="cotizacion.html" class="trip-card trip-card--tall">  
+      <img src="img/slide-mexico-index.jpeg" alt="Mexico">
+      <span class="trip-card__label">Mexico</span>
+    </a>
+
+    <a href="cotizacion.html" class="trip-card">
+      <img src="img/slide-camboya-index.jpeg" alt="Camboya">
+      <span class="trip-card__label">Camboya</span>
+    </a>
+
+    <a href="cotizacion.html" class="trip-card">
+      <img src="img/slide-india-index.jpeg" alt="India">
+      <span class="trip-card__label">India</span>
+    </a>
+
+    <a href="cotizacion.html" class="trip-card">
+      <img src="img/slide-turquia-index.jpeg" alt="Turquia">
+      <span class="trip-card__label">Turquia</span>
+    </a>
+
+    <a href="cotizacion.html" class="trip-card trip-card--wide">
+      <img src="img/slide-marruecos-index.jpeg" alt="Marruecos">
+      <span class="trip-card__label">Marruecos</span>
+    </a>
+
+    <a href="cotizacion.html" class="trip-card">
+      <img src="img/slide-peru-index.jpeg" alt="Peru">
+      <span class="trip-card__label">Perú</span>
+    </a>
+
+    <a href="cotizacion.html" class="trip-card">
+      <img src="img/slide-malasia-index.jpeg" alt="Malasia">
+      <span class="trip-card__label">Malasia</span>
+    </a>
+
+    <a href="cotizacion.html" class="trip-card">
+      <img src="img/slide-colombia-index.jpeg" alt="Colombia">
+      <span class="trip-card__label">Colombia</span>
+    </a>
+
+    <a href="cotizacion.html" class="trip-card trip-card--wide">
+      <img src="img/slide-marruecos-index.jpeg" alt="Egipto">
+      <span class="trip-card__label">Egipto</span>
+    </a>
+  </div>
+
+</section>
+
+
+    <!-- ================= REVIEWS (scroll horizontal sin JS) ================= -->
+    <section class="reviews" aria-label="Mensajes de nuestros viajeros">
+      <h2 class="reviews__title">Mensajes de nuestros viajeros</h2>
+
+      <div class="reviews__wrap">
+        <button class="reviews__arrow reviews__arrow--prev" type="button" aria-label="Anterior">‹</button>
+
+        <div class="reviews__viewport">
+          <div class="reviews__track">
+            <article class="review-card">
+              <img src="img/review.jpg" alt="Comentario de viajero 1" />
+            </article>
+
+            <article class="review-card">
+              <img src="img/review1.jpg" alt="Comentario de viajero 2" />
+            </article>
+
+            <article class="review-card">
+              <img src="img/review2.jpg" alt="Comentario de viajero 3" />
+            </article>
+
+            <article class="review-card">
+              <img src="img/review3.jpg" alt="Comentario de viajero 4" />
+            </article>
+
+            <article class="review-card">
+              <img src="img/review4.jpg" alt="Comentario de viajero 5" />
+            </article>
+          </div>
+        </div>
+
+        <button class="reviews__arrow reviews__arrow--next" type="button" aria-label="Siguiente">›</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer__content">
+      <p class="footer__text">Seguinos en nuestras redes</p>
+
+      <div class="footer__socials">
+        <a href="https://www.instagram.com/travelvip.uy" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="img/instagram.svg" alt="Instagram" />
+        </a>
+
+        <a href="https://www.tiktok.com/@travelvip.uy" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <img src="img/tiktok.svg" alt="TikTok" />
+        </a>
+
+        <a href="https://www.facebook.com/travelviptellevaadondequieras" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <img src="img/facebook.svg" alt="Facebook" />
+        </a>
+      </div>
+
+      <p class="footer__copy">© 2026 MAGNA GROUP</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiencias | MAGNA GROUP</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- CSS general del sitio -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="experiencias.css">
+  <script src="js/experiencias.js" defer></script>
+
+</head>
+
+<body>
+
+<header class="topbar">
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="img/logo-blanco.png" alt="MAGNA GROUP">
+    </a>
+
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="grupales.html">Grupales</a></li>
+      <li><a href="tienda.html">Tienda</a></li>
+      <li><a href="experiencias.html" aria-current="page">Experiencias</a></li>
+      <li><a href="cotizacion.html">Cotizá tu viaje</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ================= HERO CARRUSEL ================= -->
+<section class="experiences-hero experiences-hero--carousel" aria-label="Hero Experiencias">
+  <div class="experiences-hero__viewport">
+    <div class="experiences-hero__track" role="group" aria-roledescription="carousel" aria-label="Experiencias">
+
+      <!-- SLIDE 1 Formula Uno -->
+      <article class="experiences-hero__slide is-active" aria-roledescription="slide" aria-label="1 de 3" data-target="#exp-formula-uno">
+        <video class="experiences-hero__video" src="videos/video-formulauno.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="experiences-hero__overlay" aria-hidden="true"></div>
+
+        <div class="experiences-hero__content">
+          <p class="experiences-hero__soon">Viví</p>
+          <h1 class="experiences-hero__title">FÓRMULA UNO</h1>
+          <span class="experiences-hero__pill">Singapur, Bélgica, Monza, Países Bajos, México, Las Vegas</span>
+
+          <div class="experiences-hero__dividerline" aria-hidden="true"></div>
+          <p class="experiences-hero__bottom">Acá empieza tu próxima experiencia</p>
+          <span class="experiences-hero__arrow" aria-hidden="true">↓</span>
+        </div>
+      </article>
+
+      <!-- SLIDE 2 Rosalía -->
+      <article class="experiences-hero__slide" aria-roledescription="slide" aria-label="2 de 3" data-target="#exp-rosalia">
+        <video class="experiences-hero__video" src="videos/video-rosalia.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="experiences-hero__overlay" aria-hidden="true"></div>
+
+        <div class="experiences-hero__content">
+          <p class="experiences-hero__soon">Viví</p>
+          <h1 class="experiences-hero__title">ROSALÍA</h1>
+          <span class="experiences-hero__pill">Concierto en Buenos Aires</span>
+
+          <div class="experiences-hero__dividerline" aria-hidden="true"></div>
+          <p class="experiences-hero__bottom">Acá empieza tu próxima experiencia</p>
+          <span class="experiences-hero__arrow" aria-hidden="true">↓</span>
+        </div>
+      </article>
+
+      <!-- SLIDE 3 Champions League -->
+      <article class="experiences-hero__slide" aria-roledescription="slide" aria-label="3 de 3" data-target="#exp-champions">
+        <video class="experiences-hero__video" src="videos/video-championsleague.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="experiences-hero__overlay" aria-hidden="true"></div>
+
+        <div class="experiences-hero__content">
+          <p class="experiences-hero__soon">Viví</p>
+          <h1 class="experiences-hero__title">CHAMPIONS LEAGUE</h1>
+          <span class="experiences-hero__pill">Final 2026</span>
+
+          <div class="experiences-hero__dividerline" aria-hidden="true"></div>
+          <p class="experiences-hero__bottom">Acá empieza tu próxima experiencia</p>
+          <span class="experiences-hero__arrow" aria-hidden="true">↓</span>
+        </div>
+      </article>
+
+      <!--SLIDE 4 Moto GP-->
+      <article class="experiences-hero__slide" aria-roledescription="slide" aria-label="3 de 3" data-target="#exp-motogp">
+        <video class="experiences-hero__video" src="videos/video-motogp.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="experiences-hero__overlay" aria-hidden="true"></div>
+
+        <div class="experiences-hero__content">
+          <p class="experiences-hero__soon">Viví</p>
+          <h1 class="experiences-hero__title">Moto GP</h1>
+          <span class="experiences-hero__pill">Todas las fechas</span>
+
+          <div class="experiences-hero__dividerline" aria-hidden="true"></div>
+          <p class="experiences-hero__bottom">Acá empieza tu próxima experiencia</p>
+          <span class="experiences-hero__arrow" aria-hidden="true">↓</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <button class="experiences-hero__nav experiences-hero__nav--prev" type="button" aria-label="Anterior">‹</button>
+  <button class="experiences-hero__nav experiences-hero__nav--next" type="button" aria-label="Siguiente">›</button>
+
+  <div class="experiences-hero__indicators" aria-label="Indicadores"></div>
+</section>
+
+<!-- ================= CONTENIDO ================= -->
+<main class="experiences-page">
+  <h1 class="experiences-title">Experiencias</h1>
+  <p class="experiences-subtitle">
+    Viajes pensados para vivir algo distinto. Grupos reducidos,
+    acompañamiento y momentos que quedan.
+  </p>
+
+  <section class="experiences-list">
+
+    <!-- FORMULA UNO CARD -->
+    <article class="experience-card" id="exp-formula-uno">
+      <div class="experience-card__grid">
+
+        <div class="experience-card__info">
+          <h2 class="experience-card__title">Formula Uno</h2>
+
+          <div class="experience-card__meta">
+            <span class="experience-pill">Monza 4/9 al 7/9</span>
+            <span class="experience-pill">Singapur 8/10 al 12/10</span>
+            <span class="experience-pill">Paises Bajos 21/8 al 23/8</span>
+            <span class="experience-pill">México 29/10 al 2/11</span>
+            <span class="experience-pill">Bélgica 16/7 al 20/7</span>
+          </div>
+
+
+          <p class="experience-card__desc"> Sentí la velocidad, el rugido de los motores y la emoción de cada curva en uno de los eventos deportivos más impactantes del mundo. La Fórmula 1 no es solo una carrera: es tecnología, estrategia, glamour y adrenalina en su máxima expresión. Te llevamos a vivir el Gran Premio con organización, acompañamiento y una experiencia pensada al detalle para que solo te concentres en disfrutar cada segundo.</p>
+
+
+        <div class="experience-card__price">
+          Desde <strong></strong>
+        </div>
+
+          <div class="experience-card__box"></div>
+
+          <a href="cotizacion.html" class="experience-card__btn">Quiero saber más</a>
+        </div>
+
+        <div class="experience-card__media">
+          <img src="img/slide-formula-uno.jpg" alt="Experiencia Fórmula uno">
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ROSALIA CARD -->
+    <article class="experience-card experience-card--inverted" id="exp-rosalia">
+      <div class="experience-card__grid">
+
+        <div class="experience-card__info">
+          <h2 class="experience-card__title">Rosalía en concierto</h2>
+
+          <div class="experience-card__meta">
+            <span class="experience-pill">Salida 4/8</span>
+            <span class="experience-pill">Entrada al sector seleccionado</span>
+            <span class="experience-pill">1 Noche de alojamiento</span>
+            <span class="experience-pill">Traslado al evento</span>
+          </div>
+
+          <p class="experience-card__desc">Viví la energía, la estética y la fuerza escénica de una de las artistas más influyentes del mundo. El recital de Rosalía no es solo un show: es una puesta en escena impactante, una explosión de música, arte y cultura contemporánea. Te invitamos a ser parte de una experiencia única, combinando el espectáculo con un viaje pensado al detalle, para que solo te ocupes de disfrutar.</p>
+
+        <div class="experience-card__price">
+          Desde <strong> USD 670</strong>
+        </div>
+
+          <a href="cotizacion.html" class="experience-card__btn">Quiero saber más</a>
+        </div>
+
+        <div class="experience-card__media">
+          <img src="img/slide-rosalia.jpg" alt="Experiencia Rosalía">
+        </div>
+
+      </div>
+    </article>
+
+    <!-- CHAMPIONS CARD -->
+    <article class="experience-card" id="exp-champions">
+      <div class="experience-card__grid">
+
+        <div class="experience-card__info">
+          <h2 class="experience-card__title">Champions League</h2>
+
+          <div class="experience-card__meta">
+            <span class="experience-pill">29 de Mayo</span>
+            <span class="experience-pill">Cupos limitados</span>
+          </div>
+
+          <p class="experience-card__desc">La música del himno. El estadio vibrando. Los mejores equipos del mundo cara a cara.
+La UEFA Champions League no es solo un partido: es historia, pasión y fútbol en su máxima expresión. Te llevamos a vivir este evento único con una experiencia organizada al detalle, para que solo te concentres en disfrutar cada minuto dentro y fuera del estadio.</p>
+
+        <div class="experience-card__price">
+          Desde <strong>€ 5.596</strong>
+        </div>
+
+          <div class="experience-card__box"></div>
+
+          <a href="cotizacion.html" class="experience-card__btn">Quiero saber más</a>
+        </div>
+
+        <div class="experience-card__media">
+          <img src="img/slide-champions-league.jpg" alt="Experiencia Champions League">
+        </div>
+
+
+      </div>
+    </article>
+
+
+    <!-- MOTO GP CARD -->
+    <article class="experience-card experience-card--inverted" id="exp-motogp">
+      <div class="experience-card__grid">
+
+        <div class="experience-card__info">
+          <h2 class="experience-card__title">MOTO GP</h2>
+
+          <div class="experience-card__meta">
+            <span class="experience-pill">19 de Marzo</span>
+            <span class="experience-pill">Brasil</span>
+          </div>
+
+          <p class="experience-card__desc">El sonido no se escucha… se siente. La velocidad no se explica… se vive.
+Una experiencia cargada de adrenalina donde cada segundo cuenta. Sumate a esta salida grupal exclusiva y viví Moto GP desde adentro, con la tranquilidad de tener todo organizado y el respaldo de un equipo que te acompaña en cada momento.</p>
+
+          <div class="experience-card__price">
+            Desde <strong>USD 1.266</strong>
+          </div>
+
+
+          <div class="experience-card__box"></div>
+
+          <a href="cotizacion.html" class="experience-card__btn">Quiero saber más</a>
+        </div>
+
+        <div class="experience-card__media">
+          <img src="img/slide-motogp.jpg" alt="Experiencia Moto GP">
+        </div>
+
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__content">
+    <p class="footer__text">Seguinos en nuestras redes</p>
+
+    <div class="footer__socials">
+      <a href="#"><img src="/img/instagram.svg" alt="Instagram"></a>
+      <a href="#"><img src="/img/tiktok.svg" alt="TikTok"></a>
+      <a href="#"><img src="/img/facebook.svg" alt="Facebook"></a>
+    </div>
+
+    <p class="footer__copy">© 2026 MAGNA GROUP</p>
+  </div>
+</footer>
+
+<Footer />
+
+</body>
+</html>
