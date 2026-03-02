@@ -40,16 +40,18 @@
     }
 
     // RENDER RESUMEN (tu “cuadradillo negro”)
-    resumenEl.innerHTML = `
-      <div style="background:#111;color:#fff;padding:16px;border-radius:14px;max-width:360px">
-        <div style="font-size:14px;opacity:.9">Duración</div>
-        <div style="font-size:20px;font-weight:700">${viaje.duracion || "-"}</div>
-        <div style="margin-top:10px;font-size:14px;opacity:.9">Salida</div>
-        <div style="font-size:16px;font-weight:600">${viaje.salida || "-"}</div>
-        <div style="margin-top:10px;font-size:14px;opacity:.9">Precio</div>
-        <div style="font-size:18px;font-weight:700">${moneyUSD(viaje.precio) || "-"}</div>
-      </div>
-    `;
+resumenEl.innerHTML = `
+  <div class="viaje-box">
+    <h3 class="viaje-box__title">Resumen</h3>
+
+    <p class="viaje-box__meta">
+      <strong>Duración:</strong> ${viaje.duracion || "-"}<br/>
+      <strong>Salida:</strong> ${viaje.salida || "-"}
+    </p>
+
+    <div class="viaje-box__price">${moneyUSD(viaje.precio) || "-"}</div>
+  </div>
+`;
 
     // RENDER INCLUYE
     const items = Array.isArray(viaje.incluye) ? viaje.incluye : [];

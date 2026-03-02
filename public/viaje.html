@@ -33,51 +33,43 @@
     </nav>
   </header>
 
-  <main class="catalog">
+<main class="page viaje-layout">
 
-    <h1 id="viajeTitulo" class="catalog__title">Detalle del viaje</h1>
-    <p id="viajeMeta" class="catalog__subtitle"></p>
+  <!-- Header izquierda -->
+  <header class="viaje-header">
+    <h1 id="viajeTitulo" class="page__title">Detalle del viaje</h1>
+    <p id="viajeMeta" class="page__subtitle"></p>
+  </header>
 
-    <!-- Galería simple -->
-    <section id="viajeSlider" class="cards" aria-label="Imágenes del viaje"></section>
+  <!-- Contenido izquierda -->
+  <section class="viaje-layout__main">
+
+    <!-- Galería collage (usa tu CSS .viaje-gallery) -->
+    <section id="viajeSlider" class="viaje-gallery" aria-label="Imágenes del viaje"></section>
+
+    <!-- Texto + incluye -->
+    <div class="viaje-text">
+      <p id="viajeDescripcion" class="viaje-desc"></p>
+
+      <h2 class="viaje-h2">¿Qué incluye?</h2>
+      <ul id="viaje-incluye" class="viaje-list"></ul>
+    </div>
 
     <!-- Botones -->
-    <section class="cards" aria-label="Acciones">
+    <div class="viaje-actions" aria-label="Acciones">
       <a id="pdfLink" class="card__btn" href="#" target="_blank" rel="noopener">Descargar itinerario</a>
-      <a id="whatsappLink" class="card__btn" href="#" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      <a id="whatsappLink" class="card__btn viaje__btn-wpp" href="#" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+    </div>
 
-      <div class="card__footer">
-        <span id="viajePrecio" class="card__price"></span>
-      </div>
-    </section>
+    <p id="viaje-debug" style="color:#b00020;font-weight:600;"></p>
+  </section>
 
-    <!-- ✅ ACA VA LA TARJETA NEGRA (resumen) -->
-    <section class="about" aria-label="Resumen del viaje">
-      <div class="about__content">
-        <div id="viaje-resumen"></div>
-        <p id="viaje-debug" style="color:#b00020;font-weight:600;"></p>
-      </div>
-    </section>
+  <!-- Sidebar derecha -->
+  <aside class="viaje-layout__sidebar">
+    <div id="viaje-resumen"></div>
+  </aside>
 
-    <!-- Descripción -->
-    <section class="about" aria-label="Descripción del viaje">
-      <div class="about__content">
-        <h2 class="about__content_tittle">Detalles del viaje</h2>
-        <p id="viajeDescripcion"></p>
-      </div>
-    </section>
-
-    <!-- Incluye -->
-    <section class="about" aria-label="Qué incluye">
-      <div class="about__content">
-        <h2 class="about__content_tittle">¿Qué incluye?</h2>
-
-        <!-- ✅ ESTE ID ES EL QUE ESPERA viajes.js -->
-        <ul id="viaje-incluye"></ul>
-      </div>
-    </section>
-
-  </main>
+</main>
 
   <footer class="footer">
     <div class="footer__content">
@@ -98,8 +90,8 @@
   </footer>
 
   <!-- ✅ ORDEN CORRECTO: data primero, luego el render del detalle -->
-  <script defer src="/js/viajes-data.js"></script>
-  <script defer src="/js/viajes.js"></script>
+<script defer src="/js/viajes-data.js"></script>
+<script defer src="/js/viajes.js"></script>
 
 </body>
 </html>
