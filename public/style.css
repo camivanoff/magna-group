@@ -1,5 +1,5 @@
 /* =========================
-   MAGNA GROUP — STYLE.CSS (ordenado + responsive)
+   MAGNA GROUP — STYLE.CSS (limpio + sin pisadas)
 ========================= */
 
 :root{
@@ -71,7 +71,7 @@ a{ color: inherit; }
   gap: 16px;
 }
 
-/* Logo: soporta ambas variantes */
+/* Logo */
 .logo{
   display: flex;
   align-items: center;
@@ -117,7 +117,6 @@ a{ color: inherit; }
   text-decoration: none;
 }
 
-/* underline animado hover */
 .menu a::after{
   content:"";
   position:absolute;
@@ -136,7 +135,7 @@ a{ color: inherit; }
 .menu a[aria-current="page"]::after{ transform: scaleX(1); }
 
 /* =========================
-   HERO / CARRUSEL (solo CSS)
+   HERO / CARRUSEL
 ========================= */
 .hero{ width: 100%; }
 
@@ -697,7 +696,6 @@ a{ color: inherit; }
   opacity:.7;
 }
 
-/* Botón IZQ / Precio DER */
 .card__footer{
   margin-top:auto;
   padding: 16px 18px 20px;
@@ -753,122 +751,45 @@ a{ color: inherit; }
 }
 
 /* =========================
-   VIAJE (viaje.html) — HERO GALLERY (collage)
+   VIAJE (viaje.html) — LO QUE QUERÉS
+   1) Galería full width arriba (collage 1 grande + 3)
+   2) Título + descripción debajo de imágenes
+   3) 2 columnas: incluye izq + resumen sticky der
 ========================= */
-.viaje-hero{
-  width: 100%;
-  padding: 34px 20px 10px;
-  background: #fff;
-}
 
-/* Galería */
-.viaje-gallery{
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0 20px;
-
-  display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: 18px;
-}
-
-.viaje-gallery__main{
-  height: 520px; /* ↑ antes 420 */
-  border-radius: 22px;
-  overflow: hidden;
-  background: #000;
-  border: 1px solid rgba(0,0,0,.14);
-}
-
-/* Derecha */
-.viaje-gallery__side{
-  display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 18px;
-}
-
-.viaje-gallery__sideTop{
-  height: 250px; /* ↑ antes 200 */
-  border-radius: 18px;
-  overflow: hidden;
-  background: #000;
-  border: 1px solid rgba(0,0,0,.14);
-}
-
-.viaje-gallery__sideBottom{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
-
-.viaje-gallery__thumb{
-  height: 235px; /* ↑ antes 190 */
-  border-radius: 18px;
-  overflow: hidden;
-  background: #000;
-  border: 1px solid rgba(0,0,0,.14);
-}
-
-.viaje-gallery img{
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  object-fit: cover;
-  display: block;
-  transition: transform .35s ease;
-}
-
-.viaje-gallery img:hover{
-  transform: scale(1.05);
-}
-
-/* =========================
-   VIAJE — layout alineado perfecto (2 columnas)
-========================= */
+/* Layout 2 columnas (incluye + sidebar) */
 .page.viaje-layout{
   max-width: 1200px;
   margin: 0 auto;
-
-  /* Ajuste pedido: menos padding arriba, el título lo bajamos con margin-top */
   padding: 10px 20px 56px;
 
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto;
   gap: 60px;
   align-items: start;
 }
 
-/* Encabezado (solo izquierda) */
+/* Header (título/meta/desc) */
 .viaje-header{
   grid-column: 1 / 2;
   grid-row: 1;
 }
 
-/* Contenido izquierda */
+/* Main izq */
 .viaje-layout__main{
   grid-column: 1 / 2;
   grid-row: 2;
   min-width: 0;
 }
 
-/* Sidebar derecha */
+/* Sidebar derecha sticky */
 .viaje-layout__sidebar{
   grid-column: 2 / 3;
   grid-row: 2;
-}
-
-/* Título: más abajo + más pegado al texto siguiente */
-.page.viaje-layout .page__title{
-  margin-top: 56px;   /* ↓ baja el título */
-  margin-bottom: 8px; /* ↑ acerca el subtítulo/texto */
-}
-
-/* Subtítulo: opcional, para que quede prolijo */
-.page.viaje-layout .page__subtitle{
-  margin-top: 0;
-  margin-bottom: 18px;
+  align-self: start;
+  position: sticky;
+  top: 34px;
 }
 
 /* Box negro */
@@ -878,9 +799,6 @@ a{ color: inherit; }
   padding: 28px;
   border-radius: 22px;
   box-shadow: 0 25px 60px rgba(0,0,0,.18);
-
-  position: sticky;
-  top: 34px;
 }
 
 .viaje-box__title{
@@ -903,13 +821,122 @@ a{ color: inherit; }
   color: var(--c-primary);
 }
 
-/* Botón WhatsApp */
+/* Título: como lo tenías lindo */
+.page.viaje-layout .page__title{
+  margin-top: 56px;
+  margin-bottom: 8px;
+}
+
+.page.viaje-layout .page__subtitle{
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+/* ✅ GALERÍA (4 IMG directas dentro de #viajeSlider) */
+#viajeSlider.viaje-gallery{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 22px;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 18px;
+}
+
+/* Las imágenes */
+#viajeSlider.viaje-gallery img{
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid rgba(0,0,0,.14);
+  display: block;
+  transition: transform .35s ease;
+}
+
+#viajeSlider.viaje-gallery img:hover{
+  transform: scale(1.05);
+}
+
+/* 1ra imagen grande (izquierda) */
+#viajeSlider.viaje-gallery img:nth-child(1){
+  grid-row: 1 / span 2;
+  height: 520px;
+}
+
+/* derecha: 2 arriba, 3 y 4 abajo */
+#viajeSlider.viaje-gallery img:nth-child(2){
+  height: 250px;
+}
+
+#viajeSlider.viaje-gallery img:nth-child(3),
+#viajeSlider.viaje-gallery img:nth-child(4){
+  height: 235px;
+}
+
+/* =========================
+   VIAJE — texto, incluye y botones
+========================= */
+.viaje-text{
+  max-width: 760px;
+}
+
+.viaje-desc{
+  margin: 0 0 22px;
+  font-size: 18px;
+  line-height: 1.75;
+  opacity: .92;
+}
+
+.viaje-h2{
+  margin: 8px 0 12px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -.2px;
+}
+
+.viaje-list{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.viaje-list li{
+  padding-left: 16px;
+  border-left: 4px solid rgba(249,110,12,.35);
+  line-height: 1.55;
+  font-size: 18px;
+}
+
+/* aseguramos sin ticks */
+.viaje-list li::before,
+.viaje-list li::after,
+.viaje-list li::marker{
+  content: none !important;
+  display: none !important;
+}
+
+/* Botones */
+.viaje-actions{
+  margin-top: 30px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .viaje__btn-wpp{
   background:#25D366;
 }
 
 /* =========================
-   RESPONSIVE (global + viaje)
+   RESPONSIVE
 ========================= */
 @media (max-width: 1100px){
   .menu{ gap: 22px; }
@@ -926,16 +953,7 @@ a{ color: inherit; }
   .catalog__title{ font-size: 44px; }
   .catalog__subtitle{ font-size: 20px; }
 
-  /* Viaje: galería más alta en tablet */
-  .viaje-gallery{
-    grid-template-columns: 1fr;
-    max-width: 100%;
-  }
-
-  .viaje-gallery__main{ height: 620px; }
-  .viaje-gallery__sideTop{ height: 380px; }
-  .viaje-gallery__thumb{ height: 280px; }
-
+  /* Viaje: 1 columna */
   .page.viaje-layout{
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
@@ -944,11 +962,22 @@ a{ color: inherit; }
 
   .viaje-header{ grid-column: 1; grid-row: 1; }
   .viaje-layout__main{ grid-column: 1; grid-row: 2; }
-  .viaje-layout__sidebar{ grid-column: 1; grid-row: 3; }
+  .viaje-layout__sidebar{ grid-column: 1; grid-row: 3; position: static; top: auto; }
 
-  .viaje-box{
-    position: relative;
-    top: auto;
+  /* Galería en tablet */
+  #viajeSlider.viaje-gallery{
+    grid-template-columns: 1fr;
+  }
+
+  #viajeSlider.viaje-gallery img:nth-child(1){
+    grid-row: auto;
+    height: 420px;
+  }
+
+  #viajeSlider.viaje-gallery img:nth-child(2),
+  #viajeSlider.viaje-gallery img:nth-child(3),
+  #viajeSlider.viaje-gallery img:nth-child(4){
+    height: 240px;
   }
 }
 
@@ -1016,191 +1045,14 @@ a{ color: inherit; }
 
   .travel-form{ padding: 26px; }
 
-  /* Viaje: móvil */
-  .viaje-gallery__sideBottom{
-    grid-template-columns: 1fr;
+  /* Viaje botones full ancho */
+  .viaje-actions .card__btn{
+    width: 100%;
+    text-align: center;
   }
-
-  .viaje-gallery__main{ height: 320px; }
-  .viaje-gallery__sideTop,
-  .viaje-gallery__thumb{ height: 180px; }
 
   /* Si querés que el título no baje tanto en móvil */
   .page.viaje-layout .page__title{
     margin-top: 32px;
   }
-}
-
-/* =========================
-   VIAJE — texto, incluye y botones (estético)
-========================= */
-
-/* Mejor ancho de lectura (no tan largo) */
-.viaje-text{
-  max-width: 760px;
-}
-
-/* Descripción más linda */
-.viaje-desc{
-  margin: 0 0 22px;
-  font-size: 18px;
-  line-height: 1.75;
-  opacity: .92;
-}
-
-/* Título "¿Qué incluye?" */
-.viaje-h2{
-  margin: 8px 0 12px;
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -.2px;
-}
-
-/* Lista incluye */
-.viaje-list{
-  margin: 0;
-  padding-left: 22px;
-}
-
-.viaje-list li{
-  margin: 10px 0;
-  font-size: 18px;
-  line-height: 1.55;
-}
-
-/* ✅ separación real entre incluye y botones */
-.viaje-actions{
-  margin-top: 30px; /* esto es lo que querías */
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-/* Opcional: que en mobile los botones queden full ancho */
-@media (max-width: 620px){
-  .viaje-actions .card__btn{
-    width: 100%;
-    text-align: center;
-  }
-}
-
-.viaje-list{
-  list-style: none !important;
-  padding-left: 0 !important;
-  margin: 0;
-  display: grid;
-  gap: 12px;
-}
-
-.viaje-list li{
-  padding-left: 16px;
-  border-left: 4px solid rgba(249,110,12,.35); /* naranja suave */
-  line-height: 1.55;
-  font-size: 18px;
-}
-
-/* ✅ VIAJE: eliminar cualquier tick/marker generado por CSS */
-.viaje-list{
-  list-style: none !important;
-  padding-left: 0 !important;
-}
-
-.viaje-list li::before,
-.viaje-list li::marker{
-  content: none !important;
-  display: none !important;
-}
-
-/* =========================
-   VIAJE — APAGAR TICKS (cualquier pseudo-elemento/marker)
-   Pegar al FINAL del archivo
-========================= */
-
-.page.viaje-layout .viaje-text ul,
-.page.viaje-layout .viaje-text ol{
-  list-style: none !important;
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-}
-
-.page.viaje-layout .viaje-text li{
-  list-style: none !important;
-}
-
-/* Mata cualquier pseudo-elemento que esté dibujando el tick */
-.page.viaje-layout .viaje-text li::before,
-.page.viaje-layout .viaje-text li::after,
-.page.viaje-layout .viaje-text li::marker{
-  content: none !important;
-  display: none !important;
-  background: none !important;
-  background-image: none !important;
-  mask: none !important;
-  -webkit-mask: none !important;
-}
-
-/* Estilos de grupales.html cuando aprieto cotizar*/
-/* === VIAJE DETALLE: layout nuevo === */
-.viaje-layout{
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 28px;
-  align-items: start;
-}
-
-/* Galería full width arriba */
-.viaje-gallery--full{
-  grid-column: 1 / -1;
-  margin-top: 10px;
-}
-
-/* Título + descripción debajo de la galería, full width */
-.viaje-header--below{
-  grid-column: 1 / -1;
-  margin-top: 8px;
-}
-
-/* Columna izquierda (incluye + botones) */
-.viaje-layout__main{
-  grid-column: 1 / 2;
-}
-
-/* Columna derecha sticky (resumen flotante) */
-.viaje-layout__sidebar{
-  grid-column: 2 / 3;
-  position: sticky;
-  top: 110px; /* ajustá según tu header */
-  align-self: start;
-}
-
-/* Responsive: en mobile que baje todo a 1 columna */
-@media (max-width: 980px){
-  .viaje-layout{
-    grid-template-columns: 1fr;
-  }
-  .viaje-layout__sidebar{
-    position: static;
-    top: auto;
-  }
-}
-
-/* Opcional: si tu .viaje-gallery no está en grid, forzamos 4 imágenes tipo collage simple */
-.viaje-gallery{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.viaje-gallery img{
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-/* Que las primeras dos se vean un poco más “hero” (opcional) */
-.viaje-gallery img:nth-child(1),
-.viaje-gallery img:nth-child(2){
-  height: 320px;
 }

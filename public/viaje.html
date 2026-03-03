@@ -7,7 +7,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap"
+    rel="stylesheet"
+  />
 
   <link rel="stylesheet" href="/style.css" />
 </head>
@@ -33,43 +36,46 @@
     </nav>
   </header>
 
-<main class="page viaje-layout">
+  <!-- ================= MAIN ================= -->
+  <main class="page viaje-layout">
 
-<main class="page viaje-layout">
+    <!-- ✅ Galería FULL WIDTH -->
+    <section id="viajeSlider" class="viaje-gallery" aria-label="Imágenes del viaje"></section>
 
-  <!-- ✅ Galería FULL WIDTH -->
-  <section id="viajeSlider" class="viaje-gallery viaje-gallery--full" aria-label="Imágenes del viaje"></section>
+    <!-- ✅ Título + meta + descripción (debajo de imágenes) -->
+    <header class="viaje-header">
+      <h1 id="viajeTitulo" class="page__title">Detalle del viaje</h1>
+      <p id="viajeMeta" class="page__subtitle"></p>
+      <p id="viajeDescripcion" class="viaje-desc"></p>
+    </header>
 
-  <!-- ✅ Título + meta + descripción (debajo de imágenes) -->
-  <header class="viaje-header viaje-header--below">
-    <h1 id="viajeTitulo" class="page__title">Detalle del viaje</h1>
-    <p id="viajeMeta" class="page__subtitle"></p>
-    <p id="viajeDescripcion" class="viaje-desc"></p>
-  </header>
+    <!-- ✅ Columna izquierda: incluye + botones -->
+    <section class="viaje-layout__main">
+      <div class="viaje-text">
+        <h2 class="viaje-h2">¿Qué incluye?</h2>
+        <ul id="viaje-incluye" class="viaje-list"></ul>
 
-  <!-- ✅ 2 columnas: incluye a la izq + resumen sticky a la der -->
-  <section class="viaje-layout__main">
-    <div class="viaje-text">
-      <h2 class="viaje-h2">¿Qué incluye?</h2>
-      <ul id="viaje-incluye" class="viaje-list"></ul>
+        <div class="viaje-actions" aria-label="Acciones">
+          <a id="pdfLink" class="card__btn" href="#" target="_blank" rel="noopener">
+            Descargar itinerario
+          </a>
+          <a id="whatsappLink" class="card__btn viaje__btn-wpp" href="#" target="_blank" rel="noopener">
+            Consultar por WhatsApp
+          </a>
+        </div>
 
-      <div class="viaje-actions" aria-label="Acciones">
-        <a id="pdfLink" class="card__btn" href="#" target="_blank" rel="noopener">Descargar itinerario</a>
-        <a id="whatsappLink" class="card__btn viaje__btn-wpp" href="#" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+        <p id="viaje-debug" style="color:#b00020;font-weight:600;"></p>
       </div>
+    </section>
 
-      <p id="viaje-debug" style="color:#b00020;font-weight:600;"></p>
-    </div>
-  </section>
+    <!-- ✅ Columna derecha: resumen sticky -->
+    <aside class="viaje-layout__sidebar">
+      <div id="viaje-resumen"></div>
+    </aside>
 
-  <aside class="viaje-layout__sidebar">
-    <div id="viaje-resumen"></div>
-  </aside>
+  </main>
 
-</main>
-
-</main>
-
+  <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="footer__content">
       <p class="footer__text">Seguinos en nuestras redes</p>
@@ -89,8 +95,8 @@
   </footer>
 
   <!-- ✅ ORDEN CORRECTO: data primero, luego el render del detalle -->
-<script defer src="/js/viajes-data.js"></script>
-<script defer src="/js/viajes.js"></script>
+  <script defer src="/js/viajes-data.js"></script>
+  <script defer src="/js/viajes.js"></script>
 
 </body>
 </html>
