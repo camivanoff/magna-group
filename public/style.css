@@ -1160,3 +1160,20 @@ a{ color: inherit; }
   grid-column: 2 / 3;
   grid-row: 3;
 }
+
+/* ✅ el botón siempre clickeable encima del overlay */
+.hero__overlay{
+  position: relative;
+  z-index: 5;
+}
+
+.hero__btn{
+  position: relative;
+  z-index: 6;
+  pointer-events: auto;
+}
+
+/* Si tu slide tiene un overlay oscuro con ::after, que no bloquee clicks */
+.hero__slide::after{
+  pointer-events: none;
+}
