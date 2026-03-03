@@ -1,5 +1,5 @@
 /* =========================
-   MAGNA GROUP — STYLE.CSS (LIMPIO DEFINITIVO)
+   MAGNA GROUP — STYLE.CSS (limpio + sin pisadas)
 ========================= */
 
 :root{
@@ -16,8 +16,9 @@
   --radius-md: 18px;
 }
 
-/* ================= RESET ================= */
-
+/* =========================
+   RESET / BASE
+========================= */
 *,
 *::before,
 *::after{ box-sizing: border-box; }
@@ -31,284 +32,1112 @@ body{
   background: var(--c-white);
 }
 
-img{ max-width:100%; display:block; }
-a{ color:inherit; text-decoration:none; }
+img{ max-width: 100%; display: block; }
+a{ color: inherit; }
 
-/* ================= NAV ================= */
-
-.topbar{ background: var(--c-primary); }
-
-.navbar{
-  max-width:1200px;
-  margin:0 auto;
-  padding:18px 24px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+:focus-visible{
+  outline: 3px solid rgba(249,110,12,.6);
+  outline-offset: 3px;
 }
 
-.logo img{ height:48px; }
-
-.menu{
-  display:flex;
-  gap:40px;
-  list-style:none;
-  margin:0;
+.sr-only{
+  position:absolute;
+  width:1px;
+  height:1px;
   padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+
+/* =========================
+   NAV / TOPBAR
+========================= */
+.topbar{
+  background: var(--c-primary);
+  width: 100%;
+}
+
+.navbar{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Logo */
+.logo{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  line-height: 0;
+}
+
+.logo img{
+  height: 48px;
+  width: auto;
+}
+
+.logo__box{
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.logo__img{
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  transform: none;
+}
+
+/* Menu */
+.menu{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .menu a{
-  color:#fff;
-  font-style:italic;
-  font-weight:500;
-  position:relative;
+  position: relative;
+  font-family: var(--font-base);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--c-white);
+  text-decoration: none;
 }
 
 .menu a::after{
   content:"";
   position:absolute;
-  left:0;
-  bottom:-6px;
-  width:100%;
-  height:2px;
-  background:#fff;
-  transform:scaleX(0);
-  transform-origin:left;
-  transition:.2s;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: var(--c-white);
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .2s ease;
 }
 
-.menu a:hover::after{ transform:scaleX(1); }
+.menu a:hover::after{ transform: scaleX(1); }
+.menu a[aria-current="page"]::after{ transform: scaleX(1); }
 
-/* ================= PAGE ================= */
+/* =========================
+   HERO / CARRUSEL
+========================= */
+.hero{ width: 100%; }
 
+.hero__slider{
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 520px;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero__slide{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  animation: heroFade 15s infinite;
+}
+
+.hero__img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__slide::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,.55) 0%,
+    rgba(0,0,0,.25) 55%,
+    rgba(0,0,0,.10) 100%
+  );
+}
+
+.hero__overlay{
+  position: absolute;
+  left: 8%;
+  bottom: 18%;
+  z-index: 2;
+  max-width: 520px;
+  color: #fff;
+
+  opacity: 0;
+  transform: translateY(16px);
+  animation: heroText 15s infinite;
+}
+
+.hero__kicker{
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-style: italic;
+  letter-spacing: .3px;
+  opacity: .95;
+}
+
+.hero__title{
+  margin: 0 0 18px;
+  font-size: 44px;
+  line-height: 1.05;
+  font-weight: 800;
+}
+
+.hero__btn{
+  display: inline-block;
+  background: var(--c-primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 18px;
+  border-radius: 14px;
+  transition: transform .15s ease, opacity .15s ease;
+}
+
+.hero__btn:hover{ transform: translateY(-1px); opacity: .92; }
+
+.hero__slide--1{ animation-delay: 0s; }
+.hero__slide--2{ animation-delay: 5s; }
+.hero__slide--3{ animation-delay: 10s; }
+
+.hero__slide--1 .hero__overlay{ animation-delay: 0s; }
+.hero__slide--2 .hero__overlay{ animation-delay: 5s; }
+.hero__slide--3 .hero__overlay{ animation-delay: 10s; }
+
+@keyframes heroFade{
+  0%{opacity:0}
+  5%{opacity:1}
+  30%{opacity:1}
+  35%{opacity:0}
+  100%{opacity:0}
+}
+
+@keyframes heroText{
+  0%{opacity:0; transform:translateY(16px)}
+  8%{opacity:1; transform:translateY(0)}
+  28%{opacity:1; transform:translateY(0)}
+  35%{opacity:0; transform:translateY(16px)}
+  100%{opacity:0; transform:translateY(16px)}
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about{
+  width: 100%;
+  margin-top: 60px;
+  background: var(--c-accent);
+  padding: 80px 20px;
+}
+
+.about__content_tittle{
+  max-width: 900px;
+  margin: 0 auto 16px;
+  text-align: center;
+  color: var(--c-primary);
+}
+
+.about__content{
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+.about__content h2{
+  font-size: 36px;
+  margin: 0 0 20px;
+}
+
+.about__content p{
+  margin: 0 0 14px;
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: .92;
+}
+
+/* =========================
+   SEGMENTS
+========================= */
+.segments{
+  width: 100%;
+  background: #fff;
+  padding: 60px 20px;
+}
+
+.segments__grid{
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.segment-card{
+  position: relative;
+  min-height: 320px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center top;
+  box-shadow: 0 18px 35px rgba(0,0,0,.15);
+}
+
+.segment-card__overlay{
+  position: absolute;
+  inset: 0;
+
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 30px;
+
+  color: #fff;
+  background: rgba(0,0,0,.40);
+}
+
+.segment-card__kicker{
+  margin: 0 0 8px;
+  font-size: 16px;
+  opacity: .9;
+  font-style: italic;
+}
+
+.segment-card__title{
+  margin: 0 0 10px;
+  font-size: 34px;
+  font-weight: 800;
+  text-shadow: 0 2px 10px rgba(0,0,0,.35);
+}
+
+.segment-card__text{
+  margin: 0 0 18px;
+  font-size: 18px;
+  line-height: 1.4;
+  opacity: .95;
+  text-shadow: 0 2px 10px rgba(0,0,0,.35);
+}
+
+.segment-card__btn{
+  justify-self: center;
+  display: inline-block;
+
+  background: var(--c-primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+
+  padding: 12px 18px;
+  border-radius: 14px;
+  min-width: 180px;
+  transition: transform .15s ease, opacity .15s ease;
+}
+
+.segment-card__btn:hover{ transform: translateY(-1px); opacity: .92; }
+
+.segment-card--wide{
+  grid-column: 1 / -1;
+  min-height: 360px;
+}
+
+/* =========================
+   GRUPALES DESTACADOS (Index)
+========================= */
+.featured-trips{
+  width: 100%;
+  padding: 90px 20px;
+  background: #fff;
+}
+
+.featured-trips__title{
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.featured-trips__grid{
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 220px;
+  gap: 20px;
+}
+
+.trip-card{
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+
+  transition: transform .35s ease, box-shadow .35s ease;
+  will-change: transform;
+}
+
+.trip-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+.trip-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 40%,
+    rgba(0,0,0,.65) 100%
+  );
+  pointer-events:none;
+}
+
+.trip-card__label{
+  position:absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 2;
+
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: 0 2px 10px rgba(0,0,0,.5);
+}
+
+.trip-card:hover{
+  transform: scale(1.04);
+  box-shadow: 0 20px 45px rgba(0,0,0,.22);
+  z-index: 2;
+}
+
+.trip-card:hover img{ transform: scale(1.08); }
+
+.trip-card--tall{ grid-row: span 2; }
+.trip-card--wide{ grid-column: span 2; }
+
+/* =========================
+   REVIEWS
+========================= */
+.reviews{
+  width: 100%;
+  background: var(--c-gray);
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.reviews__title{
+  font-size: 34px;
+  margin: 0 0 38px;
+  color: var(--c-accent);
+}
+
+.reviews__arrow{ display:none; }
+
+.reviews__wrap{
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.reviews__viewport{
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.reviews__viewport::-webkit-scrollbar{ display:none; }
+
+.reviews__track{
+  display:flex;
+  gap: 26px;
+  padding: 4px 2px;
+}
+
+.review-card{
+  flex: 0 0 calc((100% - 52px) / 3);
+  background: #fff;
+  border-radius: 22px;
+  padding: 18px;
+  height: 430px;
+
+  box-shadow: 0 18px 35px rgba(0,0,0,.12);
+  display:grid;
+  place-items:center;
+  scroll-snap-align:center;
+}
+
+.review-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer{
+  width: 100%;
+  padding: 50px 20px;
+  background: var(--c-primary);
+}
+
+.footer__content{
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+.footer__text{
+  font-size: 18px;
+  margin: 0 0 20px;
+  opacity: .9;
+}
+
+.footer__socials{
+  display:flex;
+  justify-content:center;
+  gap: 28px;
+  margin-bottom: 24px;
+}
+
+.footer__socials img{
+  width: 32px;
+  height: 32px;
+  filter: invert(1);
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.footer__socials a:hover img{
+  transform: scale(1.15);
+  opacity: .85;
+}
+
+.footer__copy{
+  font-size: 14px;
+  opacity: .65;
+  margin: 0;
+}
+
+/* =========================
+   FORM (Cotización)
+========================= */
+.form-section{
+  width: 100%;
+  padding: 80px 20px;
+  background: #f5f5f5;
+}
+
+.form-section h1{
+  text-align:center;
+  font-size: 36px;
+  margin: 0 0 10px;
+}
+
+.form-subtitle{
+  text-align:center;
+  font-size: 18px;
+  opacity: .8;
+  margin: 0 0 50px;
+}
+
+.travel-form{
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 12px 26px rgba(0,0,0,.08);
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+  margin-bottom: 22px;
+}
+
+.form-group label{
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: inherit;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  outline:none;
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 4px rgba(249,110,12,.18);
+}
+
+.form-btn{
+  width: 100%;
+  padding: 14px;
+  background: var(--c-primary);
+  color: #fff;
+  font-size: 16px;
+  border:none;
+  border-radius: 12px;
+  cursor:pointer;
+  font-weight: 700;
+  transition: opacity .2s ease, transform .1s ease;
+}
+
+.form-btn:hover{ opacity:.9; }
+.form-btn:active{ transform: scale(.99); }
+
+/* =========================
+   CATALOGO + CARDS (Grupales / Destinos)
+========================= */
+.catalog{
+  width: 100%;
+  padding: 60px 20px;
+}
+
+.catalog__title{
+  max-width: 1200px;
+  margin: 0 auto 10px;
+  font-size: 32px;
+  line-height: 1.05;
+  font-weight: 800;
+}
+
+.catalog__subtitle{
+  max-width: 1200px;
+  margin: 0 auto 34px;
+  font-size: 22px;
+  opacity: .85;
+}
+
+.cards{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card{
+  background:#fff;
+  border-radius: var(--radius-md);
+  overflow:hidden;
+  box-shadow: var(--shadow-sm);
+
+  display:flex;
+  flex-direction:column;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.card__img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card__body{
+  padding: 18px;
+  display:grid;
+  gap: 8px;
+}
+
+.card__title{
+  margin:0;
+  font-size:20px;
+  font-weight:700;
+}
+
+.card__text{
+  margin:0;
+  font-size:15px;
+  opacity:.7;
+}
+
+.card__footer{
+  margin-top:auto;
+  padding: 16px 18px 20px;
+
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+
+  border-top: 1px solid #eee;
+}
+
+.card__btn{
+  background: var(--c-primary);
+  color:#fff;
+  text-decoration:none;
+  padding: 10px 18px;
+  border-radius: 14px;
+  font-weight:700;
+  white-space:nowrap;
+  transition: transform .15s ease, opacity .15s ease;
+}
+
+.card__btn:hover{ transform: translateY(-1px); opacity:.9; }
+
+.card__price{
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--c-primary);
+  white-space: nowrap;
+}
+
+/* =========================
+   PAGE (genérico)
+========================= */
 .page{
-  max-width:1200px;
-  margin:0 auto;
-  padding:56px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 20px;
 }
 
 .page__title{
-  font-size:54px;
-  font-weight:800;
-  margin:0 0 10px;
+  margin: 0 0 10px;
+  font-size: 54px;
+  line-height: 1.05;
+  font-weight: 800;
 }
 
 .page__subtitle{
-  font-size:18px;
-  opacity:.75;
-  margin:0 0 28px;
+  margin: 0 0 28px;
+  font-size: 18px;
+  opacity: .75;
 }
 
-/* =========================================================
-   VIAJE — LAYOUT PERFECTO (SIN DUPLICADOS NI PISADAS)
-========================================================= */
+/* =========================
+   VIAJE (viaje.html) — FIX DEFINITIVO (sin pisadas)
+   - Galería full width arriba (1 grande + 3 a la derecha, misma altura)
+   - Título + descripción debajo
+   - 2 columnas: incluye izq + resumen sticky der
+========================= */
 
+/* Layout del main */
 .page.viaje-layout{
-  padding:10px 20px 56px;
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  grid-template-rows:auto auto auto;
-  gap:60px;
-  align-items:start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px 56px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto; /* 1: galería, 2: header, 3: contenido */
+  gap: 60px;
+  align-items: start;
 }
 
-/* === POSICIONAMIENTO GRID === */
-
+/* ✅ Posicionamiento dentro del grid */
 #viajeSlider{
-  grid-column:1 / -1;
-  grid-row:1;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  justify-self: stretch;
 }
 
 .viaje-header{
-  grid-column:1 / -1;
-  grid-row:2;
+  grid-column: 1 / -1;
+  grid-row: 2;
 }
 
 .viaje-layout__main{
-  grid-column:1 / 2;
-  grid-row:3;
-  min-width:0;
+  grid-column: 1 / 2;
+  grid-row: 3;
+  min-width: 0;
 }
 
 .viaje-layout__sidebar{
-  grid-column:2 / 3;
-  grid-row:3;
-  position:sticky;
-  top:34px;
-  align-self:start;
+  grid-column: 2 / 3;
+  grid-row: 3;
+  align-self: start;
+  position: sticky;
+  top: 34px;
 }
 
-/* ================= GALERÍA 1 GRANDE + 3 ================= */
-
+/* ✅ Collage perfecto 1 + 3 (misma altura total) */
 #viajeSlider.viaje-gallery{
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  grid-template-rows:repeat(3, 190px);
-  gap:18px;
-  width:100%;
-  margin:0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(3, 180px);
+  gap: 18px;
 }
 
 #viajeSlider.viaje-gallery > img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  border-radius:22px;
-  border:1px solid rgba(0,0,0,.14);
-  transition:.35s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 1px solid rgba(0,0,0,.14);
+  display: block;
+  transition: transform .35s ease;
 }
 
 #viajeSlider.viaje-gallery > img:hover{
-  transform:scale(1.04);
+  transform: scale(1.04);
 }
 
-/* Imagen grande */
+/* Imagen grande izquierda */
 #viajeSlider.viaje-gallery > img:nth-child(1){
-  grid-column:1;
-  grid-row:1 / span 3;
+  grid-column: 1;
+  grid-row: 1 / span 3;
 }
 
-/* 3 derecha */
+/* 3 imágenes derecha (apiladas) */
 #viajeSlider.viaje-gallery > img:nth-child(2){
-  grid-column:2;
-  grid-row:1;
+  grid-column: 2;
+  grid-row: 1;
 }
 #viajeSlider.viaje-gallery > img:nth-child(3){
-  grid-column:2;
-  grid-row:2;
+  grid-column: 2;
+  grid-row: 2;
 }
 #viajeSlider.viaje-gallery > img:nth-child(4){
-  grid-column:2;
-  grid-row:3;
+  grid-column: 2;
+  grid-row: 3;
 }
 
-/* ================= TEXTO VIAJE ================= */
-
+/* Títulos */
 .page.viaje-layout .page__title{
-  margin-top:56px;
-  margin-bottom:8px;
+  margin-top: 56px;
+  margin-bottom: 8px;
 }
 
 .page.viaje-layout .page__subtitle{
-  margin-bottom:18px;
+  margin-top: 0;
+  margin-bottom: 18px;
 }
 
+/* Box negro */
+.viaje-box{
+  background: #111;
+  color: #fff;
+  padding: 28px;
+  border-radius: 22px;
+  box-shadow: 0 25px 60px rgba(0,0,0,.18);
+}
+
+.viaje-box__title{
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.viaje-box__meta{
+  margin: 0 0 18px;
+  opacity: .85;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.viaje-box__price{
+  margin-top: 12px;
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--c-primary);
+}
+
+/* Texto + incluye + botones */
+.viaje-text{ max-width: 760px; }
+
 .viaje-desc{
-  font-size:18px;
-  line-height:1.75;
-  margin-bottom:22px;
+  margin: 0 0 22px;
+  font-size: 18px;
+  line-height: 1.75;
+  opacity: .92;
 }
 
 .viaje-h2{
-  font-size:22px;
-  font-weight:800;
-  margin:12px 0;
+  margin: 8px 0 12px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -.2px;
 }
 
 .viaje-list{
-  list-style:none;
-  padding:0;
-  margin:0;
-  display:grid;
-  gap:12px;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
 }
 
 .viaje-list li{
-  padding-left:16px;
-  border-left:4px solid rgba(249,110,12,.35);
-  font-size:18px;
-  line-height:1.55;
+  padding-left: 16px;
+  border-left: 4px solid rgba(249,110,12,.35);
+  line-height: 1.55;
+  font-size: 18px;
 }
 
 .viaje-list li::before,
 .viaje-list li::after,
 .viaje-list li::marker{
-  content:none;
-  display:none;
-}
-
-/* ================= SIDEBAR BOX ================= */
-
-.viaje-box{
-  background:#111;
-  color:#fff;
-  padding:28px;
-  border-radius:22px;
-  box-shadow:0 25px 60px rgba(0,0,0,.18);
-}
-
-.viaje-box__title{
-  font-weight:800;
-  margin-bottom:12px;
-}
-
-.viaje-box__price{
-  font-size:30px;
-  font-weight:900;
-  color:var(--c-primary);
-  margin-top:12px;
-}
-
-/* ================= BOTONES ================= */
-
-.card__btn{
-  background:var(--c-primary);
-  color:#fff;
-  padding:10px 18px;
-  border-radius:14px;
-  font-weight:700;
-  display:inline-block;
+  content: none !important;
+  display: none !important;
 }
 
 .viaje-actions{
-  margin-top:30px;
-  display:flex;
-  gap:16px;
-  flex-wrap:wrap;
+  margin-top: 30px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.viaje__btn-wpp{
-  background:#25D366;
-}
+.viaje__btn-wpp{ background:#25D366; }
 
-/* ================= RESPONSIVE ================= */
-
-@media (max-width:980px){
-
+/* ✅ Responsive viaje */
+@media (max-width: 980px){
   .page.viaje-layout{
-    grid-template-columns:1fr;
-    grid-template-rows:auto auto auto auto;
-    gap:28px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 28px;
   }
 
-  #viajeSlider{ grid-row:1; }
-  .viaje-header{ grid-row:2; }
-  .viaje-layout__main{ grid-row:3; }
-  .viaje-layout__sidebar{
-    grid-row:4;
-    position:static;
-  }
+  #viajeSlider{ grid-column: 1; grid-row: 1; }
+  .viaje-header{ grid-column: 1; grid-row: 2; }
+  .viaje-layout__main{ grid-column: 1; grid-row: 3; }
+  .viaje-layout__sidebar{ grid-column: 1; grid-row: 4; position: static; top: auto; }
 
   #viajeSlider.viaje-gallery{
-    grid-template-columns:1fr;
-    grid-template-rows:none;
-  }
-
-  #viajeSlider.viaje-gallery > img{
-    height:260px;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
   }
 
   #viajeSlider.viaje-gallery > img:nth-child(1){
-    grid-row:auto;
+    grid-row: auto;
+  }
+
+  #viajeSlider.viaje-gallery > img{
+    height: 240px;
   }
 }
 
-@media (max-width:620px){
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1100px){
+  .menu{ gap: 22px; }
+  .menu a{ font-size: 18px; }
+}
 
-  .page__title{ font-size:32px; }
+@media (max-width: 980px){
+  .cards{ grid-template-columns: repeat(2, 1fr); }
+  .review-card{ flex: 0 0 calc((100% - 26px) / 2); }
 
-  .viaje-actions .card__btn{
-    width:100%;
-    text-align:center;
+  .featured-trips__grid{ grid-template-columns: repeat(2, 1fr); }
+  .trip-card--wide{ grid-column: span 2; }
+
+  .catalog__title{ font-size: 44px; }
+  .catalog__subtitle{ font-size: 20px; }
+
+  /* Viaje: 1 columna */
+  .page.viaje-layout{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 28px;
   }
+
+  .viaje-header{ grid-column: 1; grid-row: 1; }
+  .viaje-layout__main{ grid-column: 1; grid-row: 2; }
+  .viaje-layout__sidebar{ grid-column: 1; grid-row: 3; position: static; top: auto; }
+
+/* =========================
+   VIAJE — Collage perfecto 1 + 3
+========================= */
+
+#viajeSlider{
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(3, 170px);
+  gap: 18px;
+
+  width: 100%;
+  margin: 0 0 40px;
+}
+
+/* Todas las imágenes */
+#viajeSlider img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 1px solid rgba(0,0,0,.14);
+  display: block;
+  transition: transform .35s ease;
+}
+
+#viajeSlider img:hover{
+  transform: scale(1.04);
+}
+
+/* Imagen grande izquierda */
+#viajeSlider img:nth-child(1){
+  grid-column: 1;
+  grid-row: 1 / span 3; /* ocupa las 3 filas */
+}
+
+/* Tres imágenes derecha */
+#viajeSlider img:nth-child(2){
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#viajeSlider img:nth-child(3){
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#viajeSlider img:nth-child(4){
+  grid-column: 2;
+  grid-row: 3;
+}
+}
+
+@media (max-width: 760px){
+  .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu{
+    width: 100%;
+    justify-content: flex-start;
+    gap: 14px;
+  }
+
+  .logo img{ height: 44px; }
+  .logo__box{ height: 44px; }
+  .logo__img{ height: 44px; }
+
+  .hero__slider{
+    height: 70vh;
+    min-height: 420px;
+  }
+
+  .hero__overlay{
+    left: 6%;
+    right: 6%;
+    bottom: 14%;
+    max-width: none;
+  }
+
+  .hero__title{ font-size: 34px; }
+
+  .segments__grid{ grid-template-columns: 1fr; }
+  .segment-card--wide{ grid-column: auto; }
+
+  .review-card{
+    flex: 0 0 85%;
+    height: 380px;
+  }
+
+  .page__title{ font-size: 38px; }
+}
+
+@media (max-width: 620px){
+  .cards{ grid-template-columns: 1fr; }
+  .card__img{ height: 220px; }
+
+  .featured-trips__grid{
+    grid-template-columns: 1fr;
+    grid-auto-rows: 240px;
+  }
+
+  .trip-card--tall,
+  .trip-card--wide{
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .about{ padding: 60px 18px; }
+  .about__content h2{ font-size: 30px; }
+
+  .catalog__title{ font-size: 34px; }
+  .page__title{ font-size: 32px; }
+
+  .travel-form{ padding: 26px; }
+
+  /* Viaje botones full ancho */
+  .viaje-actions .card__btn{
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Si querés que el título no baje tanto en móvil */
+  .page.viaje-layout .page__title{
+    margin-top: 32px;
+  }
+}
+
+/* ✅ FIX: la galería ocupa todo el ancho arriba del layout */
+#viajeSlider{
+  grid-column: 1 / -1;
+  grid-row: 1;
+  justify-self: stretch;
+}
+
+/* ✅ el header va abajo de la galería, también full width */
+.viaje-header{
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+/* ✅ la columna izquierda arranca después del header */
+.viaje-layout__main{
+  grid-column: 1 / 2;
+  grid-row: 3;
+}
+
+/* ✅ la sidebar sticky también arranca después del header */
+.viaje-layout__sidebar{
+  grid-column: 2 / 3;
+  grid-row: 3;
 }
