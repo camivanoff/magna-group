@@ -173,7 +173,7 @@ window.VIAJES = [
         "Asistencia permanente de nuestro personal en destino",
         "Seguro de viaje"
     ],
-    pdf: "/pdfs/turquiadubai-abril.pdf",
+    pdf: "/pdfs/turquiaydubai-abril.pdf",
     whatsappText: "Hola! Quiero consultar por el viaje a Turquía y Dubai."
   },
 
