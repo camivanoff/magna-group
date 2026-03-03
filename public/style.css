@@ -1056,3 +1056,28 @@ a{ color: inherit; }
     margin-top: 32px;
   }
 }
+
+/* ✅ FIX: la galería ocupa todo el ancho arriba del layout */
+#viajeSlider{
+  grid-column: 1 / -1;
+  grid-row: 1;
+  justify-self: stretch;
+}
+
+/* ✅ el header va abajo de la galería, también full width */
+.viaje-header{
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+/* ✅ la columna izquierda arranca después del header */
+.viaje-layout__main{
+  grid-column: 1 / 2;
+  grid-row: 3;
+}
+
+/* ✅ la sidebar sticky también arranca después del header */
+.viaje-layout__sidebar{
+  grid-column: 2 / 3;
+  grid-row: 3;
+}
