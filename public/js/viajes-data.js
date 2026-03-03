@@ -15,7 +15,9 @@ window.VIAJES = [
     precio: 8500,
     tipo: "Viaje grupal acompañado",
     descripcion: "Japón es un viaje donde tradición y modernidad conviven en perfecta armonía.",
-    incluye: [],
+    incluye: [
+
+    ],
     pdf: "/pdfs/itinerario-japon.pdf",
     whatsappText: "Hola! Quiero consultar por el viaje a Japón."
   },
@@ -110,7 +112,21 @@ window.VIAJES = [
     precio: 5500,
     tipo: "Viaje grupal acompañado",
     descripcion: "Islas, historia y mitología frente al mar Egeo.",
-    incluye: [],
+    incluye: [
+        "Vuelo intercontinental",
+        "Vuelos internos: Heraklion - Rodas - Atenas",
+        "Todos los traslados incluidos",
+        "Ferries: Atenas - Mykonos - Santorini - Heraklion",
+        "Alojamiento en hoteles seleccionados con desayunos diarios",
+        "2 noches en Atenas, 2 noches en Mykonos, 2 noches en Santorini, 2 noches en Heraklion, 2 noches en Rodas, 1 noche en Atenas, 2 noches en Madrid",
+        "City tour en Atenas con visita a la Acrópolis",
+        "Paseo en velero tradicional en Santorini con visita a las islas volcánicas Nea Kameni y Palea Kameni (aguas termales)",
+        "Tardes libres en Mykonos y Santorini para disfrutas sus playas",
+        "Tiempo libre en Fira y Oía, los pueblos mas emblemáticos de Santorini",
+        "Posibilidad de realizar un tour por la ciudad de Madrid al final de viaje",
+        "Asistencia local durante todo el recorrido",
+        "Seguro de viaje"
+    ],
     pdf: "/pdfs/itinerario-ruta-iberica.pdf",
     whatsappText: "Hola! Quiero consultar por el viaje a Grecia en Abril."
   },
