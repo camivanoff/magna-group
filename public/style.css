@@ -1178,3 +1178,59 @@ a{ color: inherit; }
   z-index: 4;
   pointer-events: auto;
 }
+
+/* =========================
+   NAV MOBILE HAMBURGUESA
+========================= */
+
+.nav-toggle{
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.nav-toggle__bar{
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin: 5px 0;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Mobile */
+@media (max-width: 760px){
+
+  .navbar{
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-toggle{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* oculto el menú por defecto */
+  .menu{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 12px;
+  }
+
+  /* cuando está abierto */
+  .menu.is-open{
+    display: flex;
+  }
+
+  /* para que el menú baje debajo del nav */
+  .navbar{
+    flex-wrap: wrap;
+  }
+}

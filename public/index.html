@@ -23,8 +23,18 @@
       </a>
 
 
+  <!-- ✅ Botón hamburguesa (solo mobile) -->
+  <button class="nav-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-controls="mainMenu"
+          aria-expanded="false">
+    <span class="nav-toggle__bar"></span>
+    <span class="nav-toggle__bar"></span>
+    <span class="nav-toggle__bar"></span>
+  </button>
 
-      <ul class="menu">
+      <ul class="menu" id="mainMenu">
         <li><a href="index.html" aria-current="page">Inicio</a></li>
         <li><a href="grupales.html">Grupales</a></li>
         <li><a href="tienda.html">Tienda</a></li>
@@ -239,6 +249,8 @@
       <p class="footer__copy">© 2026 MAGNA GROUP</p>
     </div>
   </footer>
+
+  <script defer src="/js/nav.js"></script>
 
 </body>
 </html>
