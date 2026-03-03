@@ -30,6 +30,7 @@ body{
   font-family: var(--font-base);
   color: var(--c-dark);
   background: var(--c-white);
+  padding-top: 84px;
 }
 
 img{ max-width: 100%; display: block; }
@@ -58,6 +59,24 @@ a{ color: inherit; }
 .topbar{
   background: var(--c-primary);
   width: 100%;
+}
+
+/* ================= NAVBAR STICKY ================= */
+
+.topbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: var(--c-primary);
+  transition: box-shadow .3s ease, background .3s ease;
+}
+
+/* Sombra cuando scrollea */
+.topbar.scrolled{
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
 }
 
 .navbar{
