@@ -1139,3 +1139,68 @@ a{ color: inherit; }
   mask: none !important;
   -webkit-mask: none !important;
 }
+
+/* Estilos de grupales.html cuando aprieto cotizar*/
+/* === VIAJE DETALLE: layout nuevo === */
+.viaje-layout{
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 28px;
+  align-items: start;
+}
+
+/* Galería full width arriba */
+.viaje-gallery--full{
+  grid-column: 1 / -1;
+  margin-top: 10px;
+}
+
+/* Título + descripción debajo de la galería, full width */
+.viaje-header--below{
+  grid-column: 1 / -1;
+  margin-top: 8px;
+}
+
+/* Columna izquierda (incluye + botones) */
+.viaje-layout__main{
+  grid-column: 1 / 2;
+}
+
+/* Columna derecha sticky (resumen flotante) */
+.viaje-layout__sidebar{
+  grid-column: 2 / 3;
+  position: sticky;
+  top: 110px; /* ajustá según tu header */
+  align-self: start;
+}
+
+/* Responsive: en mobile que baje todo a 1 columna */
+@media (max-width: 980px){
+  .viaje-layout{
+    grid-template-columns: 1fr;
+  }
+  .viaje-layout__sidebar{
+    position: static;
+    top: auto;
+  }
+}
+
+/* Opcional: si tu .viaje-gallery no está en grid, forzamos 4 imágenes tipo collage simple */
+.viaje-gallery{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.viaje-gallery img{
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Que las primeras dos se vean un poco más “hero” (opcional) */
+.viaje-gallery img:nth-child(1),
+.viaje-gallery img:nth-child(2){
+  height: 320px;
+}
