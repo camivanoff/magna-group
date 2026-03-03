@@ -10,12 +10,31 @@
     return (params.get("id") || location.hash.replace("#", "") || "").trim();
   }
 
+  function escapeHtml(str) {
+    return String(str)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
   function renderViajeSeguro() {
     const debugEl = document.getElementById("viaje-debug");
+
+    // ✅ IDs reales de tu HTML
+    const tituloEl = document.getElementById("viajeTitulo");
+    const metaEl = document.getElementById("viajeMeta");
+    const sliderEl = document.getElementById("viajeSlider");
+    const descripcionEl = document.getElementById("viajeDescripcion");
+
     const incluyeEl = document.getElementById("viaje-incluye");
     const resumenEl = document.getElementById("viaje-resumen");
 
-    // Validar contenedores
+    const pdfLinkEl = document.getElementById("pdfLink");
+    const whatsappLinkEl = document.getElementById("whatsappLink");
+
+    // Validar contenedores mínimos
     if (!incluyeEl || !resumenEl) {
       if (debugEl) debugEl.textContent = "Falta #viaje-incluye o #viaje-resumen en el HTML.";
       console.error("Faltan contenedores del detalle:", { incluyeEl, resumenEl });
@@ -39,32 +58,77 @@
         : "No vino ?id=... en la URL. Mostrando el primer viaje.";
     }
 
-    // RENDER RESUMEN (tu “cuadradillo negro”)
-resumenEl.innerHTML = `
-  <div class="viaje-box">
-    <h3 class="viaje-box__title">Resumen</h3>
+    // ✅ TÍTULO
+    if (tituloEl) tituloEl.textContent = viaje.titulo || "Detalle del viaje";
 
-    <p class="viaje-box__meta">
-      <strong>Duración:</strong> ${viaje.duracion || "-"}<br/>
-      <strong>Salida:</strong> ${viaje.salida || "-"}
-    </p>
+    // ✅ META (duración + salida)
+    if (metaEl) {
+      const dur = viaje.duracion ? `Duración: ${viaje.duracion}` : "";
+      const sal = viaje.salida ? `Salida: ${viaje.salida}` : "";
+      metaEl.textContent = [dur, sal].filter(Boolean).join(" · ");
+    }
 
-    <div class="viaje-box__price">${moneyUSD(viaje.precio) || "-"}</div>
-  </div>
-`;
+    // ✅ DESCRIPCIÓN
+    if (descripcionEl) descripcionEl.textContent = viaje.descripcion || "";
 
-    // RENDER INCLUYE
+    // ✅ GALERÍA (tus 4 imágenes arriba)
+    if (sliderEl) {
+      const imgs = Array.isArray(viaje.imagenes) ? viaje.imagenes : [];
+      sliderEl.innerHTML = imgs.length
+        ? imgs.slice(0, 4).map((src, i) => `
+            <img
+              src="${src}"
+              alt="${escapeHtml((viaje.titulo || "Viaje") + " " + (i + 1))}"
+              loading="lazy"
+            />
+          `).join("")
+        : "";
+    }
+
+    // ✅ PDF
+    if (pdfLinkEl) {
+      if (viaje.pdf) {
+        pdfLinkEl.href = viaje.pdf;
+        pdfLinkEl.style.display = "";
+      } else {
+        pdfLinkEl.href = "#";
+        pdfLinkEl.style.display = "none";
+      }
+    }
+
+    // ✅ WhatsApp (si tenés whatsappText en la data)
+    if (whatsappLinkEl) {
+      const texto = viaje.whatsappText || `Hola! Quiero consultar por el viaje ${viaje.titulo || ""}.`;
+      const encoded = encodeURIComponent(texto);
+      // ⚠️ Poné tu número real acá si querés que salga directo a tu WhatsApp
+      const phone = ""; // ejemplo: "59891633163"
+      const base = phone ? `https://wa.me/${phone}?text=${encoded}` : `https://wa.me/?text=${encoded}`;
+      whatsappLinkEl.href = base;
+    }
+
+    // ✅ RESUMEN (cuadradillo negro)
+    resumenEl.innerHTML = `
+      <div class="viaje-box">
+        <h3 class="viaje-box__title">Resumen</h3>
+
+        <p class="viaje-box__meta">
+          <strong>Duración:</strong> ${escapeHtml(viaje.duracion || "-")}<br/>
+          <strong>Salida:</strong> ${escapeHtml(viaje.salida || "-")}
+        </p>
+
+        <div class="viaje-box__price">${moneyUSD(viaje.precio) || "-"}</div>
+      </div>
+    `;
+
+    // ✅ INCLUYE
     const items = Array.isArray(viaje.incluye) ? viaje.incluye : [];
     incluyeEl.innerHTML = items.length
-      ? items.map(x => `<li>${x}</li>`).join("")
+      ? items.map(x => `<li>${escapeHtml(x)}</li>`).join("")
       : "<li>Consultá por WhatsApp para el detalle completo.</li>";
 
     console.log("✅ Detalle renderizado:", { idDetectado: id, viajeUsado: viaje.id });
   }
 
-  // Ejecutar cuando el DOM esté listo
   document.addEventListener("DOMContentLoaded", renderViajeSeguro);
-
-  // Exponer para que puedas forzar desde consola si querés
   window.renderViajeSeguro = renderViajeSeguro;
 })();
