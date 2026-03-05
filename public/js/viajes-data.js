@@ -35,7 +35,7 @@ window.VIAJES = [
         "Dias libres en Kyoto y Tokyo para explorar por cuenta propia o realizar excursiones opcionales como Hiroshima y Miyajima",
         "4 dias en Dubai"
     ],
-    pdf: "/pdfs/itinerario-japon.pdf",
+    pdf: "/pdfs/",
     whatsappText: "Hola! Quiero consultar por el viaje a Japón."
   },
 
@@ -68,7 +68,7 @@ window.VIAJES = [
         "Seguro de protección y asistencia en viaje",
         "Bolsa de viaje"
     ],
-    pdf: "/pdfs/itinerario-ruta-iberica.pdf",
+    pdf: "/pdfs/espanaportugal-mayo.pdf",
     whatsappText: "Hola! Quiero consultar por el viaje España y Portugal."
   },
 
@@ -102,7 +102,7 @@ window.VIAJES = [
         "Paseos incluídos: degustación de tapas en Madrid, paseo en barco en Venecia, vistas exteriores en la Sagrada Familia, entre otros",
         "Tiempo libre en cada ciudad para explorar o realizar excursiones opcionales como Toledo, Capri, Mónaco, Versalles, Brujas"
     ],
-    pdf: "/pdfs/itinerario-ruta-iberica.pdf",
+    pdf: "/pdfs/esp-ita-fran-sui-octubre.pdf",
     whatsappText: "Hola! Quiero consultar por el viaje España, Francia, Italia y Suiza."
   },
 
@@ -136,7 +136,7 @@ window.VIAJES = [
         "Excursión en barco Phi Phi Bamboo Island: playas, snorkel, mirador, cueva vikinga",
         "Vuelo de regreso a Bangkok"
     ],
-    pdf: "/pdfs/itinerario-ruta-iberica.pdf",
+    pdf: "/pdfs/tailandia-abril.pdf",
     whatsappText: "Hola! Quiero consultar por el viaje a Tailandia."
   },
 
@@ -206,7 +206,7 @@ window.VIAJES = [
         "Asistencia local durante todo el recorrido",
         "Seguro de viaje"
     ],
-    pdf: "/pdfs/itinerario-ruta-iberica.pdf",
+    pdf: "/pdfs/grecia-abril.pdf",
     whatsappText: "Hola! Quiero consultar por el viaje a Grecia en Abril."
   },
 
@@ -237,7 +237,7 @@ window.VIAJES = [
         "Asistencia permanente en destino",
         "Seguro de viaje"
     ],
-    pdf: "/pdfs/itinerario-ruta-iberica.pdf",
+    pdf: "/pdfs/alemania-abril.pdf",
     whatsappText: "Hola! Quiero consultar por el viaje a Alemania y Europa del Este."
   },
 
@@ -270,7 +270,7 @@ window.VIAJES = [
         "Posibilidad de realizar un tour por la ciudad de Madrid al final del viaje",
         "Asistencia local durante todo el recorrido"
     ],
-    pdf: "/pdfs/itinerario-ruta-iberica.pdf",
+    pdf: "/pdfs/grecia-setiembre.pdf",
     whatsappText: "Hola! Quiero consultar por el viaje a Grecia en Setiembre."
   },
 
@@ -306,7 +306,7 @@ window.VIAJES = [
         "Asistencia permanente en destino y guía de habla hispana",
         "Seguro de asistencia"
     ],
-    pdf: "/pdfs/itinerario-ruta-iberica.pdf",
+    pdf: "/pdfs/turquiadubai-setiembre.pdf",
     whatsappText: "Hola! Quiero consultar por el viaje a Turquía y Dubai."
   },
 
@@ -335,13 +335,13 @@ window.VIAJES = [
         "Tiempo libre en cada ciudad para explorar o realizar excursiones opcionales como Toledo, Vaticano, Capri, Mónaco, Versalles, etc",
         "Resumen del recorrido: 4 noches en España, 4 noches en Francia, 6 noches en Italia, 1 noche en Suiza" 
     ],
-    pdf: "/pdfs/itinerario-ruta-iberica.pdf",
+    pdf: "/pdfs/esp-ita-fran-sui-octubre.pdf",
     whatsappText: "Hola! Quiero consultar por el viaje a España, Italia, Francia y Suiza."
   },
 
   {
     id: "tesoros-milenarios",
-    titulo: "Tesoros Milenarios",
+    titulo: "Turquia, Grecia y Egipto",
     imagenes: [
       "/img/tesoros1.jpeg",
       "/img/tesoros2.jpeg",
@@ -365,7 +365,7 @@ window.VIAJES = [
         "EN GRECIA: 3 noches de Alojamiento y Desayuno en Atenas, 2 noches de Alojamiento y Desayuno en Mykonos, 2 noches de Alojamiento y Desayuno en Santorini, todos los traslados de llegada y salida en las islas y en Atenas. Todos los billetes de ferry entre las islas según itinerario. Medio día de Visita de la ciudad de Atenas. Asistencia al viajero 24h/7 en español vía (WhatsApp – Teléfono)",
         "Seguro de viaje"*/
     ],
-    pdf: "/pdfs/itinerario-ruta-iberica.pdf",
-    whatsappText: "Hola! Quiero consultar por el viaje a Tesoros Milenarios."
+    pdf: "/pdfs/turquia-grecia-egipto.pdf",
+    whatsappText: "Hola! Quiero consultar por el viaje a Turquia, Grecia y Egipto."
   }
 ];
