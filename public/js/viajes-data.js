@@ -11,7 +11,7 @@ window.VIAJES = [
       "/img/japon4.jpeg"
     ],
     duracion: "19 días",
-    salida: "8 de Marzo 2026",
+    salida: "30 de Agosto 2026",
     precio: 8500,
     tipo: "Viaje grupal acompañado",
     descripcion: "Japón es un viaje donde tradición y modernidad conviven en perfecta armonía.",
@@ -33,7 +33,7 @@ window.VIAJES = [
         "Osaka: Paseo por Dotonbori y visita al Castillo de Osaka",
         "Transporte: tren bala y trenes express entre ciudades",
         "Dias libres en Kyoto y Tokyo para explorar por cuenta propia o realizar excursiones opcionales como Hiroshima y Miyajima",
-        "4 dias en Dubai"
+        "4 dias en Madrid"
     ],
     pdf: "/pdfs/",
     whatsappText: "Hola! Quiero consultar por el viaje a Japón."
