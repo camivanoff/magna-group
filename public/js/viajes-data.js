@@ -116,7 +116,7 @@ window.VIAJES = [
       "/img/tailandia4.jpeg"
     ],
     duracion: "16 días",
-    salida: "7 de Abril 2026",
+    salida: "REPROGRAMADA",
     precio: 6590,
     tipo: "Viaje grupal acompañado",
     descripcion: "Templos, naturaleza y cultura del Sudeste Asiático.",
@@ -150,7 +150,7 @@ window.VIAJES = [
       "/img/turquiaydubai4.jpeg"
     ],
     duracion: "16 días",
-    salida: "14 de Abril 2026",
+    salida: "REPROGRAMADA",
     precio: 4920,
     tipo: "Viaje grupal acompañado",
     descripcion: "Historia milenaria y modernidad en un mismo viaje.",
