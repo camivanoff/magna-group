@@ -576,6 +576,28 @@ html, body{
   margin: 0;
 }
 
+/*==========================
+ESTILOS DEL AVAL
+===========================*/
+.footer__aval{
+  margin-top: 25px;
+  text-align: center;
+}
+
+.footer__aval-text{
+  font-size: 14px;
+  margin-bottom: 10px;
+  opacity: .8;
+}
+
+.footer__qr{
+  width: 90px;
+  height: auto;
+  background: white;
+  padding: 6px;
+  border-radius: 8px;
+}
+
 /* =========================
    FORM (Cotización)
 ========================= */
