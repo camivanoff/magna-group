@@ -187,7 +187,7 @@ window.VIAJES = [
       "/img/greciaabril4.jpeg"
     ],
     duracion: "15 días",
-    salida: "REPROGRAMADA",
+    salida: "23 de Abril",
     precio: 6000,
     tipo: "Viaje grupal acompañado",
     descripcion: "Islas, historia y mitología frente al mar Egeo.",
