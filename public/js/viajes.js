@@ -22,7 +22,7 @@
   function renderViajeSeguro() {
     const debugEl = document.getElementById("viaje-debug");
 
-    // ✅ IDs reales de tu HTML
+    // ✅ ELEMENTOS
     const tituloEl = document.getElementById("viajeTitulo");
     const metaEl = document.getElementById("viajeMeta");
     const sliderEl = document.getElementById("viajeSlider");
@@ -34,14 +34,12 @@
     const pdfLinkEl = document.getElementById("pdfLink");
     const whatsappLinkEl = document.getElementById("whatsappLink");
 
-    // Validar contenedores mínimos
     if (!incluyeEl || !resumenEl) {
       if (debugEl) debugEl.textContent = "Falta #viaje-incluye o #viaje-resumen en el HTML.";
       console.error("Faltan contenedores del detalle:", { incluyeEl, resumenEl });
       return;
     }
 
-    // Validar data
     const viajes = window.VIAJES;
     if (!Array.isArray(viajes) || viajes.length === 0) {
       if (debugEl) debugEl.textContent = "No se cargó la data de viajes (window.VIAJES).";
@@ -61,7 +59,7 @@
     // ✅ TÍTULO
     if (tituloEl) tituloEl.textContent = viaje.titulo || "Detalle del viaje";
 
-    // ✅ META (duración + salida)
+    // ✅ META
     if (metaEl) {
       const dur = viaje.duracion ? `Duración: ${viaje.duracion}` : "";
       const sal = viaje.salida ? `Salida: ${viaje.salida}` : "";
@@ -71,7 +69,7 @@
     // ✅ DESCRIPCIÓN
     if (descripcionEl) descripcionEl.textContent = viaje.descripcion || "";
 
-    // ✅ GALERÍA (tus 4 imágenes arriba)
+    // ✅ GALERÍA
     if (sliderEl) {
       const imgs = Array.isArray(viaje.imagenes) ? viaje.imagenes : [];
       sliderEl.innerHTML = imgs.length
@@ -91,22 +89,22 @@
         pdfLinkEl.href = viaje.pdf;
         pdfLinkEl.style.display = "";
       } else {
-        pdfLinkEl.href = "#";
         pdfLinkEl.style.display = "none";
       }
     }
 
-    // ✅ WhatsApp (si tenés whatsappText en la data)
+    // ✅ WhatsApp
     if (whatsappLinkEl) {
       const texto = viaje.whatsappText || `Hola! Quiero consultar por el viaje ${viaje.titulo || ""}.`;
       const encoded = encodeURIComponent(texto);
-      // ⚠️ Poné tu número real acá si querés que salga directo a tu WhatsApp
-      const phone = ""; // ejemplo: "59891633163"
-      const base = phone ? `https://wa.me/${phone}?text=${encoded}` : `https://wa.me/?text=${encoded}`;
+      const phone = ""; // opcional: "598XXXXXXXX"
+      const base = phone
+        ? `https://wa.me/${phone}?text=${encoded}`
+        : `https://wa.me/?text=${encoded}`;
       whatsappLinkEl.href = base;
     }
 
-    // ✅ RESUMEN (cuadradillo negro)
+    // ✅ RESUMEN (con "Desde" opcional)
     resumenEl.innerHTML = `
       <div class="viaje-box">
         <h3 class="viaje-box__title">Resumen</h3>
@@ -116,7 +114,11 @@
           <strong>Salida:</strong> ${escapeHtml(viaje.salida || "-")}
         </p>
 
-        <div class="viaje-box__price">${moneyUSD(viaje.precio) || "-"}</div>
+        <div class="viaje-box__price">
+          ${viaje.precio
+            ? `${viaje.precioDesde ? "Desde " : ""}${moneyUSD(viaje.precio)}`
+            : "-"}
+        </div>
       </div>
     `;
 
