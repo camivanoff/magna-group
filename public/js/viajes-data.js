@@ -402,10 +402,10 @@ window.VIAJES = [
     id: "cataratas-del-iguazu",
     titulo: "Cataratas del Iguazú",
     imagenes: [
-      "/img/brasil-mujeres1.jpeg",
-      "/img/brasil-mujeres2.jpeg",
-      "/img/brasil-mujeres3.jpeg",
-      "/img/brasil-mujeres4.jpeg"
+      "/img/cataratas1.jpeg",
+      "/img/cataratas2.jpeg",
+      "/img/cataratas3.jpeg",
+      "/img/cataratas4.jpeg"
     ],
     duracion: "7 días",
     salida: "2 de Setiembre 2026",
