@@ -395,7 +395,36 @@ window.VIAJES = [
         "Seguro de viaje"
     ],
     pdf: "/pdfs/brasil-nov.pdf",
-    whatsappText: "Hola! Quiero consultar por el viaje a España, Italia, Francia y Suiza."
+    whatsappText: "Hola! Quiero consultar por el viaje acompañado a Brasil."
+  },
+  
+  {
+    id: "cataratas-del-iguazu",
+    titulo: "Cataratas del Iguazú",
+    imagenes: [
+      "/img/brasil-mujeres1.jpeg",
+      "/img/brasil-mujeres2.jpeg",
+      "/img/brasil-mujeres3.jpeg",
+      "/img/brasil-mujeres4.jpeg"
+    ],
+    duracion: "7 días",
+    salida: "2 de Setiembre 2026",
+    precio: 1490,
+    precioDesde: true,
+    tipo: "Viaje grupal acompañado en bus",
+    descripcion: "Descubrí la magia de las Cataratas del Iguazú, una de las maravillas naturales del mundo.",
+    incluye: [
+        "Vuelo ida y vuelta MVD-Asunción-MVD",
+        "Traslados incluidos",
+        "2 noches en Asunción en hotel 4 estrellas con desayuno",
+        "4 noches en Foz del Iguazú en hotel 5 estrellas con media pensión",
+        "Bus cama cabina",
+        "Paseos con entradas incluidas",
+        "Circuito interno",
+        "Seguro de viaje"
+    ],
+    pdf: "/pdfs/cataratas-del-iguazu.pdf",
+    whatsappText: "Hola! Quiero consultar por el viaje a Cataratas del Iguazú."
   },
 
 ];
