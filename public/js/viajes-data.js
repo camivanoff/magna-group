@@ -381,6 +381,7 @@ window.VIAJES = [
     duracion: "11 días",
     salida: "2 de Noviembre 2026",
     precio: 2050,
+    precioDesde: true,
     tipo: "Viaje grupal acompañado",
     descripcion: "Una experiencia completa entre playas de ensueño y la energía única de Río, con todo organizado para disfrutar sin preocuparte",
     incluye: [
