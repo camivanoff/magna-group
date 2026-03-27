@@ -420,7 +420,7 @@ window.VIAJES = [
         "4 noches en Foz del Iguazú en hotel 5 estrellas con media pensión",
         "Bus cama cabina",
         "Paseos con entradas incluidas",
-        "Circuito interno",
+        "Circuitos internos",
         "Seguro de viaje"
     ],
     pdf: "/pdfs/cataratas-del-iguazu.pdf",
