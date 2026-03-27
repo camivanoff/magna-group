@@ -354,18 +354,47 @@ window.VIAJES = [
     tipo: "Viaje grupal acompañado",
     descripcion: "Turquía, Egipto y Grecia en un viaje único.",
     incluye: [
-        /*"TODOS LOS VUELOS: Montevideo – Estambul – El Cairo - Atenas -Montevideo",
+        "TODOS LOS VUELOS: Montevideo / Estambul / El Cairo / Atenas / Montevideo",
         "Asistencia a la llegada y salida en el aeropuerto por personal de habla hispana",
         "Traslados de llegada y salida del aeropuerto principal en las capitales",
         "19 noches de alojamiento en los hoteles indicados", 
         "4 noches a bordo del crucero por el Nilo",
         "Régimen alimenticio según itinerario",
-        "EN TURQUÍA: 4 noches de alojamiento y desayuno en Estambul, 5 noches de alojamiento durante el circuito. Régimen de media pensión durante el circuito, traslados de llegada y salida, visita a la Mezquita de Solimán el Magnifico en Estambul, excursión en Estambul (Paseo en barco por el Bósforo-Bazar Egipcio), entradas y visitas según el itinerario, guía profesional de habla hispana, asistencia al viajero 24h/7 en español vía (WhatsApp – Teléfono)",
-        "EN EGIPTO: 3 noches de alojamiento y desayuno en El Cairo, 4 noches de crucero por el Nilo en régimen de pensión completa. Vuelos domésticos (Cairo-Luxor-Aswan-Cairo). Medio día de visita a las pirámides, la esfinge, templo del valle, entradas y visitas según el itinerario. Guía profesional de habla hispana, traslados de llegada y salida, asistencia al viajero 24h/7 en español vía (WhatsApp – Teléfono)",
-        "EN GRECIA: 3 noches de Alojamiento y Desayuno en Atenas, 2 noches de Alojamiento y Desayuno en Mykonos, 2 noches de Alojamiento y Desayuno en Santorini, todos los traslados de llegada y salida en las islas y en Atenas. Todos los billetes de ferry entre las islas según itinerario. Medio día de Visita de la ciudad de Atenas. Asistencia al viajero 24h/7 en español vía (WhatsApp – Teléfono)",
-        "Seguro de viaje"*/
+        "EN TURQUÍA: 4 noches de alojamiento y desayuno en Estambul, 5 noches de alojamiento durante el circuito. Régimen de media pensión durante el circuito, traslados de llegada y salida, visita a la Mezquita de Solimán el Magnifico en Estambul, excursión en Estambul (Paseo en barco por el Bósforo-Bazar Egipcio), entradas y visitas según el itinerario, guía profesional de habla hispana, asistencia al viajero 24h/7 en español vía (WhatsApp, Teléfono)",
+        "EN EGIPTO: 3 noches de alojamiento y desayuno en El Cairo, 4 noches de crucero por el Nilo en régimen de pensión completa. Vuelos domésticos (Cairo-Luxor-Aswan-Cairo). Medio día de visita a las pirámides, la esfinge, templo del valle, entradas y visitas según el itinerario. Guía profesional de habla hispana, traslados de llegada y salida, asistencia al viajero 24h/7 en español vía (WhatsApp, Teléfono)",
+        "EN GRECIA: 3 noches de Alojamiento y Desayuno en Atenas, 2 noches de Alojamiento y Desayuno en Mykonos, 2 noches de Alojamiento y Desayuno en Santorini, todos los traslados de llegada y salida en las islas y en Atenas. Todos los billetes de ferry entre las islas según itinerario. Medio día de Visita de la ciudad de Atenas. Asistencia al viajero 24h/7 en español vía (WhatsApp, Teléfono)",
+        "Seguro de viaje"
     ],
     pdf: "/pdfs/turquia-grecia-egipto.pdf",
     whatsappText: "Hola! Quiero consultar por el viaje a Turquia, Grecia y Egipto."
-  }
+  },
+
+  {
+    id: "brasil-para-mujeres",
+    titulo: "Brasil para mujeres",
+    imagenes: [
+      "/img/brasil-mujeres1.jpeg",
+      "/img/brasil-mujeres2.jpeg",
+      "/img/brasil-mujeres3.jpeg",
+      "/img/brasil-mujeres4.jpeg"
+    ],
+    duracion: "11 días",
+    salida: "2 de Noviembre 2026",
+    precio: desde2050,
+    tipo: "Viaje grupal acompañado",
+    descripcion: "Una experiencia completa entre playas de ensueño y la energía única de Río, con todo organizado para disfrutar sin preocuparte",
+    incluye: [
+        "Vuelo ida y vuelta por Jetmart con carry-on",
+        "Traslados incluidos",
+        "Guía desde Montevideo",
+        "8 noches de alojamiento en Buzios + 2 noches de alojamiento en Rio de Janeiro",
+        "Salida en Buggy por Buzios",
+        "Tour completo en Río de Janeiro con Cristo Redentor",
+        "Fiesta en barco con tragos incluidos para el cierre de la experiencia",
+        "Seguro de viaje"
+    ],
+    pdf: "/pdfs/brasil-nov.pdf",
+    whatsappText: "Hola! Quiero consultar por el viaje a España, Italia, Francia y Suiza."
+  },
+
 ];
