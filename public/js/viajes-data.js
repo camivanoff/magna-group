@@ -321,7 +321,7 @@ window.VIAJES = [
     ],
     duracion: "18 días",
     salida: "18 de Octubre 2026",
-    precio: 4710,
+    precio: 4760,
     tipo: "Viaje grupal acompañado",
     descripcion: "Europa clásica con guía acompañante.",
     incluye: [
