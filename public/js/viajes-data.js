@@ -221,7 +221,7 @@ window.VIAJES = [
     ],
     duracion: "15 días",
     salida: "23 de Abril 2026",
-    precio: 4700,
+    precio: 4710,
     tipo: "Viaje grupal acompañado",
     descripcion: "Castillos, historia y ciudades con carácter.",
     incluye: [
