@@ -427,4 +427,31 @@ window.VIAJES = [
     whatsappText: "Hola! Quiero consultar por el viaje a Cataratas del Iguazú."
   },
 
+  {
+    id: "europa-23-dias",
+    titulo: "Europa en 23 dias",
+    imagenes: [
+      "/img/europa1.jpeg",
+      "/img/europa2.jpeg",
+      "/img/europa3.jpeg",
+      "/img/europa4.jpeg"
+    ],
+    duracion: "23 días",
+    salida: "7 de Marzo 2027",
+    precio: 4850,
+    tipo: "Viaje grupal acompañado",
+    descripcion: "Descubrí la magia de las Cataratas del Iguazú, una de las maravillas naturales del mundo.",
+    incluye: [
+        "Vuelos internacionales",
+        "Traslados incluidos",
+        "Guía desde Montevideo",
+        "Desayunos diarios",
+        "Bus cama cabina",
+        "Visitas incluidas en Londres, París, Ámsterdam, Praga, Roma, Florencia y Madrid",
+        "Seguro de viaje"
+    ],
+    pdf: "/pdfs/europa-marzo.pdf",
+    whatsappText: "Hola! Quiero consultar por el viaje a Europa en 23 días."
+  },
+
 ];
