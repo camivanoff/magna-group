@@ -107,40 +107,6 @@ window.VIAJES = [
   },
 
   {
-    id: "tailandia",
-    titulo: "Tailandia",
-    imagenes: [
-      "/img/tailandia1.jpeg",
-      "/img/tailandia2.jpeg",
-      "/img/tailandia3.jpeg",
-      "/img/tailandia4.jpeg"
-    ],
-    duracion: "16 días",
-    salida: "REPROGRAMADA",
-    precio: 6590,
-    tipo: "Viaje grupal acompañado",
-    descripcion: "Templos, naturaleza y cultura del Sudeste Asiático.",
-    incluye: [
-        "Vuelo intercontinental MVD - Tailandia - MVD",
-        "Recepción en aeropuerto y traslados aeropuertos - hoteles",
-        "Encuentro con guía y asistencia en el aeropuerto",
-        "Desayunos diarios - 4 almuerzos",
-        "Tour cultural: Buda de Oro, Palacio Real y Buda Esmeralda, Buda Reclinado",
-        "Excursión al mercado sobre la vía del tren y mercado flotante de Damnoen Saduak",
-        "Visita a las ruinas de Ayutthaya (templos históricos)",
-        "Vuelo hacia Chiang Mai",
-        "Medio día en Kanta Elephant Sanctuary: alimentación y baño de elefantes",
-        "Excursión a Chiang Rai: Templo Azul, Wat Huay Pla Kang, Templo Blanco y aguas termales",
-        "Parque Nacional Doi Inthanon: casada Wachirathan, pagodas reales, caminata por bosque y visita a aldeas locales",
-        "Vuelo hacia Phuket",
-        "Excursión en barco Phi Phi Bamboo Island: playas, snorkel, mirador, cueva vikinga",
-        "Vuelo de regreso a Bangkok"
-    ],
-    pdf: "/pdfs/tailandia-abril.pdf",
-    whatsappText: "Hola! Quiero consultar por el viaje a Tailandia."
-  },
-
-  {
     id: "turquia-y-dubai-abril",
     titulo: "Turquía y Dubai",
     imagenes: [
@@ -440,7 +406,7 @@ window.VIAJES = [
     salida: "7 de Marzo 2027",
     precio: 4850,
     tipo: "Viaje grupal acompañado",
-    descripcion: "Descubrí la magia de las Cataratas del Iguazú, una de las maravillas naturales del mundo.",
+    descripcion: "Las grandes capitales europeas en un solo viaje.",
     incluye: [
         "Vuelos internacionales",
         "Traslados incluidos",
