@@ -411,8 +411,10 @@ window.VIAJES = [
         "Vuelos internacionales",
         "Traslados incluidos",
         "Guía desde Montevideo",
+        "21 noches de alojamiento",
         "Desayunos diarios",
-        "Bus cama cabina",
+        "Bus de larga distancia durante todo el recorrido",
+        "Guias locales en las principales ciudades",
         "Visitas incluidas en Londres, París, Ámsterdam, Praga, Roma, Florencia y Madrid",
         "Seguro de viaje"
     ],
