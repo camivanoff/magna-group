@@ -1367,10 +1367,8 @@ ICONOS CIRCULARES
   justify-content: center;
 }
 
-.material-symbols-outlined {
+.icon-circle i {
   color: white;
-  font-size: 28px;
-  line-height: 1;
 }
 
 /* tablet */
