@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAGNA GROUP</title>
+
+  <link rel="icon" href="img/logo-magna-perfil.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+      <!-- ================= HEADER / NAV ================= -->
+  <header class="topbar">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a href="index.html" class="logo" aria-label="Ir al inicio">
+          <img src="/img/logo-blanco.png" alt="MAGNA GROUP">
+      </a>
+
+
+  <!-- ✅ Botón hamburguesa (solo mobile) -->
+  <button class="nav-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-controls="mainMenu"
+          aria-expanded="false">
+    <span class="nav-toggle__bar"></span>
+    <span class="nav-toggle__bar"></span>
+    <span class="nav-toggle__bar"></span>
+  </button>
+
+      <ul class="menu" id="mainMenu">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="grupales.html">Grupales</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="experiencias.html">Experiencias</a></li>
+        <li><a href="cotizacion.html">Cotizá tu viaje</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+  <!-- ================= MAIN ================= -->
+  <main class="page viaje-layout">
+
+    <!-- ✅ Galería FULL WIDTH -->
+    <section id="viajeSlider" class="viaje-gallery" aria-label="Imágenes del viaje"></section>
+
+    <!-- ✅ Título + meta + descripción (debajo de imágenes) -->
+    <header class="viaje-header">
+      <h1 id="viajeTitulo" class="page__title">Detalle del viaje</h1>
+      <p id="viajeDescripcion" class="viaje-desc"></p>
+    </header>
+
+    <!-- ✅ Columna izquierda: incluye + botones -->
+    <section class="viaje-layout__main">
+      <div class="viaje-text">
+        <h2 class="viaje-h2">¿Qué incluye?</h2>
+        <ul id="viaje-incluye" class="viaje-list"></ul>
+
+        <div class="viaje-actions" aria-label="Acciones">
+          <a id="pdfLink" class="card__btn" href="#" target="_blank" rel="noopener">
+            Descargar itinerario
+          </a>
+          <a id="whatsappLink" class="card__btn viaje__btn-wpp" href="#" target="_blank" rel="noopener">
+            Consultar por WhatsApp
+          </a>
+        </div>
+
+        <p id="viaje-debug" style="color:#b00020;font-weight:600;"></p>
+      </div>
+    </section>
+
+    <!-- ✅ Columna derecha: resumen sticky -->
+    <aside class="viaje-layout__sidebar">
+      <div id="viaje-resumen"></div>
+    </aside>
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer__content">
+      <p class="footer__text">Seguinos en nuestras redes</p>
+
+      <div class="footer__socials">
+        <a href="https://www.instagram.com/travelvip.uy" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="img/instagram.svg" alt="Instagram" />
+        </a>
+
+        <a href="https://www.tiktok.com/@travelvip.uy" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <img src="img/tiktok.svg" alt="TikTok" />
+        </a>
+
+        <a href="https://www.facebook.com/travelviptellevaadondequieras" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <img src="img/facebook.svg" alt="Facebook" />
+        </a>
+      </div>
+
+    <!-- QR Aval -->
+    <div class="footer__aval">
+      <p class="footer__aval-text">Agencia habilitada</p>
+      <img src="img/aval777.jpeg" alt="QR aval agencia" class="footer__qr">
+    </div>      
+
+      <p class="footer__copy">© 2026 MAGNA GROUP</p>
+    </div>
+  </footer>
+
+  <script defer src="/js/nav.js"></script>
+
+  </main>
+</body>
