@@ -1347,6 +1347,24 @@ body {
   transform: translateY(-1px);
 }
 
+/*================
+ICONOS CIRCULARES
+==================*/
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  background: #49b8ad;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-circle i {
+  color: white;
+  font-size: 18px;
+}
+
 /* tablet */
 @media (max-width: 1100px) {
   .viajes-grid {
