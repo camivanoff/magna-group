@@ -1136,6 +1136,189 @@ ESTILOS DEL AVAL
   border-radius: 2px;
 }
 
+/*=========================
+VACACIONES DE JULIO
+==========================*/
+
+.viaje-card {
+  max-width: 420px;
+  width: 100%;
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e9e9e9;
+  margin: 20px auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+.viaje-img-wrap {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.viaje-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.viaje-body {
+  padding: 24px;
+}
+
+.viaje-titulo {
+  font-size: 2rem;
+  line-height: 1.15;
+  font-weight: 600;
+  color: #222;
+  margin: 0 0 12px;
+}
+
+.viaje-ref {
+  font-size: 1.15rem;
+  color: #6d6d6d;
+  margin-bottom: 18px;
+}
+
+.viaje-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.tag {
+  background: #d8f3ee;
+  color: #245e59;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+
+.viaje-desc {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.viaje-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  color: #d9295b;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.viaje-icons {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #42b7ac;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.viaje-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.precio-box {
+  flex: 1;
+  min-width: 160px;
+}
+
+.precio-label {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.precio {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111;
+  line-height: 1;
+}
+
+.moneda {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-right: 6px;
+}
+
+.precio-sub {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 6px;
+  line-height: 1.2;
+}
+
+.btn-ver {
+  background: #42b7ac;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 16px 28px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
+}
+
+.btn-ver:hover {
+  background: #349a91;
+}
+
+@media (max-width: 480px) {
+  .viaje-card {
+    border-radius: 20px;
+  }
+
+  .viaje-body {
+    padding: 18px;
+  }
+
+  .viaje-titulo {
+    font-size: 1.5rem;
+  }
+
+  .precio {
+    font-size: 2rem;
+  }
+
+  .btn-ver {
+    width: 100%;
+  }
+
+  .viaje-footer {
+    align-items: stretch;
+  }
+}
+
 /* Mobile */
 @media (max-width: 760px){
 
