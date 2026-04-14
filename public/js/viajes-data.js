@@ -422,4 +422,44 @@ window.VIAJES = [
     whatsappText: "Hola! Quiero consultar por el viaje a Europa en 23 días."
   },
 
+    {
+    id: "indiaynepal",
+    titulo: "India y Nepal",
+    imagenes: [
+      "/img/india-nepal1.jpeg",
+      "/img/india-nepal2.jpeg",
+      "/img/india-nepal3.jpeg",
+      "/img/india-nepal4.jpeg"
+    ],
+    duracion: "15 días",
+    salida: "24 de Octubre 2026",
+    precio: 7500,
+    tipo: "Viaje grupal acompañado",
+    descripcion: "Un recorrido fascinante entre culturas ancestrales, ciudades vibrantes y paisajes del Himalaya, con cada detalle cuidado para viajar tranquilo.",
+    incluye: [
+    "Vuelos internacionales",
+    "Vuelos internos (Varanasi – Delhi – Kathmandú)",
+    "Traslados en destino y asistencia en aeropuertos",
+    "Guía acompañante desde Montevideo (con mínimo de pasajeros)",
+    "13 noches de alojamiento en hoteles seleccionados",
+    "Desayunos diarios",
+    "Régimen de comidas según itinerario (almuerzos y cenas incluidos)",
+    "Bus y transporte terrestre durante todo el recorrido",
+    "Ticket de tren Agra – Jhansi",
+    "Guías locales de habla hispana en cada destino",
+    "Visitas incluidas en Delhi, Jaipur, Agra, Khajuraho, Varanasi y Kathmandú",
+    "Entradas a todos los monumentos y sitios mencionados",
+    "Visita al Taj Mahal al amanecer o atardecer",
+    "Paseo en barco por el río Ganges en Varanasi",
+    "Ceremonias Aarti en templos de India",
+    "Experiencias culturales: paseo en rickshaw, tonga y subida en jeep al Fuerte Amber",
+    "Cena con espectáculo de danzas típicas en Jaipur",
+    "Agua mineral durante los traslados",
+    "Seguro de viaje",
+    ],
+    pdf: "/pdfs/india-nepal-agosto.pdf",
+    whatsappText: "Hola! Quiero consultar por el viaje a Europa en 23 días."
+  },
+
+
 ];
