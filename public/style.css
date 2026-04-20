@@ -685,7 +685,7 @@ a{ color: inherit; }
 
 .catalog__subtitle{
   max-width: 1200px;
-  margin: 0 auto 26px;
+  margin: 0 auto 18px;
   font-size: clamp(1rem, 1.5vw, 1.2rem);
   color: #5f5f5f;
   line-height: 1.5;
@@ -1406,16 +1406,40 @@ a{ color: inherit; }
 
   .page__title{ font-size: 38px; }
 
-  .year-nav{
-    top: 82px;
-    margin-bottom: 26px;
-  }
+/* navegación rápida por año */
+.year-nav{
+  max-width: 1200px;
+  margin: 18px auto 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 0;
+}
 
-  .year-nav a{
-    min-width: 70px;
-    padding: 9px 14px;
-    font-size: 13px;
-  }
+.year-nav a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 74px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: #f4f4f4;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0 6px 16px rgba(0,0,0,.05);
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+  transition: transform .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease;
+}
+
+.year-nav a:hover{
+  background: var(--c-primary);
+  color: #fff;
+  box-shadow: 0 12px 22px rgba(249,110,12,.18);
+  transform: translateY(-1px);
+}
 
   .catalog-year__title{
     font-size: 22px;
