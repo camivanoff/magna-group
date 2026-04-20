@@ -1,5 +1,5 @@
 /* =========================
-   MAGNA GROUP — STYLE.CSS (limpio + sin pisadas)
+   MAGNA GROUP — STYLE.CSS
 ========================= */
 
 :root{
@@ -14,6 +14,16 @@
   --shadow-sm: 0 10px 25px rgba(0,0,0,.08);
   --shadow-md: 0 16px 34px rgba(0,0,0,.10);
   --radius-md: 18px;
+
+  /* extras para vacaciones */
+  --brand-orange: #f97300;
+  --brand-orange-dark: #e56600;
+  --text-dark: #1f1f1f;
+  --text-soft: #666666;
+  --bg-light: #f3f3f3;
+  --white: #ffffff;
+  --border-soft: #ececec;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 /* =========================
@@ -23,14 +33,22 @@
 *::before,
 *::after{ box-sizing: border-box; }
 
-html{ scroll-behavior: smooth; }
+*{ min-width: 0; }
+
+html{
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 body{
+  width: 100%;
   margin: 0;
   font-family: var(--font-base);
   color: var(--c-dark);
   background: var(--c-white);
   padding-top: 84px;
+  overflow-x: hidden;
 }
 
 img{ max-width: 100%; display: block; }
@@ -53,32 +71,19 @@ a{ color: inherit; }
   border:0;
 }
 
-/* ✅ FIX GLOBAL anti-corrimiento (no cambia diseño, solo evita overflow en mobile) */
-html, body{
-  width: 100%;
-  overflow-x: hidden;
-}
-
-/* ayuda con flex/grid para que hijos no empujen el ancho */
-*{ min-width: 0; }
-
 /* =========================
    NAV / TOPBAR
 ========================= */
-
-/* (había duplicado .topbar, lo unifico) */
 .topbar{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-
   background: var(--c-primary);
   transition: box-shadow .3s ease, background .3s ease;
 }
 
-/* Sombra cuando scrollea */
 .topbar.scrolled{
   box-shadow: 0 10px 30px rgba(0,0,0,.15);
 }
@@ -87,14 +92,12 @@ html, body{
   max-width: 1200px;
   margin: 0 auto;
   padding: 18px 24px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
 }
 
-/* Logo */
 .logo{
   display: flex;
   align-items: center;
@@ -120,12 +123,10 @@ html, body{
   transform: none;
 }
 
-/* Menu */
 .menu{
   display: flex;
   align-items: center;
   gap: 40px;
-
   list-style: none;
   margin: 0;
   padding: 0;
@@ -148,7 +149,6 @@ html, body{
   width: 100%;
   height: 2px;
   background: var(--c-white);
-
   transform: scaleX(0);
   transform-origin: left;
   transition: transform .2s ease;
@@ -195,17 +195,16 @@ html, body{
     rgba(0,0,0,.25) 55%,
     rgba(0,0,0,.10) 100%
   );
-  pointer-events: none; /* ✅ FIX CLICK EN HERO: no bloquea botón */
+  pointer-events: none;
 }
 
 .hero__overlay{
   position: absolute;
   left: 8%;
   bottom: 18%;
-  z-index: 3; /* ✅ arriba del degradé */
+  z-index: 3;
   max-width: 520px;
   color: #fff;
-
   opacity: 0;
   transform: translateY(16px);
   animation: heroText 15s infinite;
@@ -235,7 +234,6 @@ html, body{
   padding: 12px 18px;
   border-radius: 14px;
   transition: transform .15s ease, opacity .15s ease;
-
   position: relative;
   z-index: 4;
   pointer-events: auto;
@@ -315,7 +313,6 @@ html, body{
 .segments__grid{
   max-width: 1200px;
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 28px;
@@ -326,7 +323,6 @@ html, body{
   min-height: 320px;
   border-radius: var(--radius-md);
   overflow: hidden;
-
   background-size: cover;
   background-position: center top;
   box-shadow: 0 18px 35px rgba(0,0,0,.15);
@@ -335,12 +331,10 @@ html, body{
 .segment-card__overlay{
   position: absolute;
   inset: 0;
-
   display: grid;
   place-content: center;
   text-align: center;
   padding: 30px;
-
   color: #fff;
   background: rgba(0,0,0,.40);
 }
@@ -370,12 +364,10 @@ html, body{
 .segment-card__btn{
   justify-self: center;
   display: inline-block;
-
   background: var(--c-primary);
   color: #fff;
   text-decoration: none;
   font-weight: 700;
-
   padding: 12px 18px;
   border-radius: 14px;
   min-width: 180px;
@@ -408,7 +400,6 @@ html, body{
 .featured-trips__grid{
   max-width: 1200px;
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 220px;
@@ -420,7 +411,6 @@ html, body{
   border-radius: var(--radius-md);
   overflow: hidden;
   cursor: pointer;
-
   transition: transform .35s ease, box-shadow .35s ease;
   will-change: transform;
 }
@@ -449,7 +439,6 @@ html, body{
   left: 16px;
   bottom: 16px;
   z-index: 2;
-
   color: #fff;
   font-size: 20px;
   font-weight: 600;
@@ -501,6 +490,7 @@ html, body{
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
+
 .reviews__viewport::-webkit-scrollbar{ display:none; }
 
 .reviews__track{
@@ -515,7 +505,6 @@ html, body{
   border-radius: 22px;
   padding: 18px;
   height: 320px;
-
   box-shadow: 0 18px 35px rgba(0,0,0,.12);
   display:grid;
   place-items:center;
@@ -576,9 +565,6 @@ html, body{
   margin: 0;
 }
 
-/*==========================
-ESTILOS DEL AVAL
-===========================*/
 .footer__aval{
   margin-top: 25px;
   display: flex;
@@ -701,12 +687,50 @@ ESTILOS DEL AVAL
   opacity: .85;
 }
 
+/* navegación rápida por año */
+.year-nav{
+  max-width: 1200px;
+  margin: 20px auto 30px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.year-nav a{
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #f2f2f2;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: .2s ease;
+}
+
+.year-nav a:hover{
+  background: var(--c-primary);
+  color: #fff;
+}
+
+/* bloques por año */
+.catalog-year{
+  margin-top: 50px;
+}
+
+.catalog-year__title{
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* grid de cards */
 .cards{
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
 }
 
 .card{
@@ -714,7 +738,6 @@ ESTILOS DEL AVAL
   border-radius: var(--radius-md);
   overflow:hidden;
   box-shadow: var(--shadow-sm);
-
   display:flex;
   flex-direction:column;
   transition: transform .15s ease, box-shadow .15s ease;
@@ -727,37 +750,35 @@ ESTILOS DEL AVAL
 
 .card__img{
   width:100%;
-  height:200px;
+  height:180px;
   object-fit:cover;
 }
 
 .card__body{
-  padding: 18px;
+  padding: 16px;
   display:grid;
-  gap: 8px;
+  gap: 6px;
 }
 
 .card__title{
   margin:0;
-  font-size:20px;
+  font-size:18px;
   font-weight:700;
 }
 
 .card__text{
   margin:0;
-  font-size:15px;
+  font-size:14px;
   opacity:.7;
 }
 
 .card__footer{
   margin-top:auto;
-  padding: 16px 18px 20px;
-
+  padding: 14px 16px 18px;
   display:flex;
   align-items:center;
   justify-content: space-between;
-  gap: 12px;
-
+  gap: 10px;
   border-top: 1px solid #eee;
 }
 
@@ -765,9 +786,10 @@ ESTILOS DEL AVAL
   background: var(--c-primary);
   color:#fff;
   text-decoration:none;
-  padding: 10px 18px;
+  padding: 9px 14px;
   border-radius: 14px;
   font-weight:700;
+  font-size: 14px;
   white-space:nowrap;
   transition: transform .15s ease, opacity .15s ease;
 }
@@ -775,7 +797,7 @@ ESTILOS DEL AVAL
 .card__btn:hover{ transform: translateY(-1px); opacity:.9; }
 
 .card__price{
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 800;
   color: var(--c-primary);
   white-space: nowrap;
@@ -804,29 +826,23 @@ ESTILOS DEL AVAL
 }
 
 /* =========================
-   VIAJE (viaje.html) — ÚNICO BLOQUE (sin duplicados)
+   VIAJE (viaje.html)
 ========================= */
-
-/* Layout del main */
 .page.viaje-layout{
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px 20px 56px;
-
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto auto auto; /* 1: galería, 2: header, 3: contenido */
+  grid-template-rows: auto auto auto;
   gap: 60px;
   align-items: start;
 }
 
-/* Posicionamiento dentro del grid */
 #viajeSlider{
   grid-column: 1 / -1;
   grid-row: 1;
   justify-self: stretch;
-
-  /* ✅ clave anti-corrida si JS mete cosas extra o si hay transform */
   width: 100%;
   max-width: 100%;
   overflow: hidden;
@@ -852,12 +868,10 @@ ESTILOS DEL AVAL
   min-width: 0;
 }
 
-/* Collage perfecto 1 + 3 */
 #viajeSlider.viaje-gallery{
   width: 100%;
   margin: 0;
   padding: 0;
-
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(3, 180px);
@@ -878,27 +892,26 @@ ESTILOS DEL AVAL
   transform: scale(1.04);
 }
 
-/* Imagen grande izquierda */
 #viajeSlider.viaje-gallery > img:nth-child(1){
   grid-column: 1;
   grid-row: 1 / span 3;
 }
 
-/* 3 imágenes derecha */
 #viajeSlider.viaje-gallery > img:nth-child(2){
   grid-column: 2;
   grid-row: 1;
 }
+
 #viajeSlider.viaje-gallery > img:nth-child(3){
   grid-column: 2;
   grid-row: 2;
 }
+
 #viajeSlider.viaje-gallery > img:nth-child(4){
   grid-column: 2;
   grid-row: 3;
 }
 
-/* Títulos */
 .page.viaje-layout .page__title{
   margin-top: 56px;
   margin-bottom: 8px;
@@ -909,7 +922,6 @@ ESTILOS DEL AVAL
   margin-bottom: 18px;
 }
 
-/* Box negro */
 .viaje-box{
   background: #111;
   color: #fff;
@@ -938,7 +950,6 @@ ESTILOS DEL AVAL
   color: var(--c-primary);
 }
 
-/* Texto + incluye + botones */
 .viaje-text{ max-width: 760px; }
 
 .viaje-desc{
@@ -990,15 +1001,256 @@ ESTILOS DEL AVAL
 .viaje__btn-wpp{ background:#25D366; }
 
 /* =========================
+   NAV MOBILE HAMBURGUESA
+========================= */
+.nav-toggle{
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.nav-toggle__bar{
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin: 5px 0;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* =========================
+   VACACIONES DE JULIO
+========================= */
+.viajes-section{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 48px 24px 70px;
+}
+
+.viajes-header{
+  margin-bottom: 32px;
+}
+
+.viajes-header h2{
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin: 0 0 10px;
+  color: var(--text-dark);
+}
+
+.viajes-header p{
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  color: #4f4f4f;
+  margin: 0;
+  font-weight: 400;
+}
+
+.viajes-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+.viaje-card{
+  background: var(--white);
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-soft);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.viaje-img-wrap{
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.viaje-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.viaje-card:hover .viaje-img{
+  transform: scale(1.04);
+}
+
+.viaje-badge{
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #84CCE4;
+  color: white;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.2px;
+}
+
+.viaje-body{
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.viaje-titulo{
+  font-size: 1.45rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: var(--text-dark);
+}
+
+.viaje-ref{
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  margin: 0 0 16px;
+}
+
+.viaje-tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.tag{
+  background: #fff3e8;
+  color: var(--brand-orange);
+  border: 1px solid #ffd7b5;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.viaje-desc{
+  font-size: 0.98rem;
+  color: #555;
+  line-height: 1.55;
+  margin: 0 0 18px;
+}
+
+.viaje-data{
+  margin-bottom: 24px;
+}
+
+.viaje-data p{
+  margin: 0 0 8px;
+  color: var(--brand-orange);
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+.viaje-footer{
+  margin-top: auto;
+  display: flex;
+  gap: 18px;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.precio-box{
+  display: flex;
+  flex-direction: column;
+}
+
+.precio-label{
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  margin-bottom: 4px;
+}
+
+.precio{
+  font-size: 2.2rem;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.moneda{
+  font-size: 1rem;
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.precio-sub{
+  margin-top: 6px;
+  color: var(--text-soft);
+  font-size: 0.88rem;
+  line-height: 1.2;
+}
+
+.btn-ver{
+  background: var(--brand-orange);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px 24px;
+  border-radius: 999px;
+  transition: background 0.25s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-ver:hover{
+  background: var(--brand-orange-dark);
+  transform: translateY(-1px);
+}
+
+/* iconos circulares */
+.viaje-icons{
+  display: flex;
+  gap: 14px;
+  margin: 18px 0;
+  flex-wrap: wrap;
+}
+
+.icon-circle{
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #F96E0C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-circle i{
+  color: white;
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 1100px){
   .menu{ gap: 22px; }
   .menu a{ font-size: 18px; }
+
+  .cards{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .viajes-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 980px){
-  .cards{ grid-template-columns: repeat(2, 1fr); }
   .review-card{ flex: 0 0 calc((100% - 26px) / 2); }
 
   .featured-trips__grid{ grid-template-columns: repeat(2, 1fr); }
@@ -1007,7 +1259,6 @@ ESTILOS DEL AVAL
   .catalog__title{ font-size: 44px; }
   .catalog__subtitle{ font-size: 20px; }
 
-  /* Viaje: 1 columna + sidebar sin sticky */
   .page.viaje-layout{
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
@@ -1024,7 +1275,6 @@ ESTILOS DEL AVAL
     top: auto;
   }
 
-  /* Collage pasa a 1 columna */
   #viajeSlider.viaje-gallery{
     grid-template-columns: 1fr;
     grid-template-rows: none;
@@ -1041,14 +1291,32 @@ ESTILOS DEL AVAL
 
 @media (max-width: 760px){
   .navbar{
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-toggle{
+    display: inline-flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
   }
 
   .menu{
+    display: none;
     width: 100%;
-    justify-content: flex-start;
+    flex-direction: column;
     gap: 14px;
+    margin-top: 12px;
+  }
+
+  .menu.is-open{
+    display: flex;
+  }
+
+  .cards{
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .logo img{ height: 44px; }
@@ -1080,9 +1348,50 @@ ESTILOS DEL AVAL
   .page__title{ font-size: 38px; }
 }
 
+@media (max-width: 700px){
+  .viajes-section{
+    padding: 32px 16px 50px;
+  }
+
+  .viajes-grid{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .viaje-img-wrap{
+    height: 220px;
+  }
+
+  .viaje-body{
+    padding: 18px;
+  }
+
+  .viaje-titulo{
+    font-size: 1.2rem;
+  }
+
+  .precio{
+    font-size: 1.8rem;
+  }
+
+  .btn-ver{
+    width: 100%;
+    text-align: center;
+  }
+
+  .viaje-footer{
+    align-items: stretch;
+  }
+}
+
 @media (max-width: 620px){
-  .cards{ grid-template-columns: 1fr; }
-  .card__img{ height: 220px; }
+  .cards{
+    grid-template-columns: 1fr;
+  }
+
+  .card__img{
+    height: 220px;
+  }
 
   .featured-trips__grid{
     grid-template-columns: 1fr;
@@ -1103,344 +1412,12 @@ ESTILOS DEL AVAL
 
   .travel-form{ padding: 26px; }
 
-  /* Viaje botones full ancho */
   .viaje-actions .card__btn{
     width: 100%;
     text-align: center;
   }
 
-  /* Si querés que el título no baje tanto en móvil */
   .page.viaje-layout .page__title{
     margin-top: 32px;
-  }
-}
-
-/* =========================
-   NAV MOBILE HAMBURGUESA
-========================= */
-
-.nav-toggle{
-  display: none;
-  background: transparent;
-  border: 0;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.nav-toggle__bar{
-  display: block;
-  width: 26px;
-  height: 3px;
-  margin: 5px 0;
-  background: #fff;
-  border-radius: 2px;
-}
-
-/*=========================
-VACACIONES DE JULIO
-==========================*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
-
-:root {
-  --brand-orange: #f97300;
-  --brand-orange-dark: #e56600;
-  --text-dark: #1f1f1f;
-  --text-soft: #666666;
-  --bg-light: #f3f3f3;
-  --white: #ffffff;
-  --border-soft: #ececec;
-  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  background: var(--bg-light);
-  color: var(--text-dark);
-}
-
-.viajes-section {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 48px 24px 70px;
-}
-
-.viajes-header {
-  margin-bottom: 32px;
-}
-
-.viajes-header h2 {
-  font-size: clamp(2rem, 3vw, 3.2rem);
-  font-weight: 800;
-  line-height: 1.05;
-  margin: 0 0 10px;
-  color: var(--text-dark);
-}
-
-.viajes-header p {
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
-  color: #4f4f4f;
-  margin: 0;
-  font-weight: 400;
-}
-
-.viajes-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  align-items: stretch;
-}
-
-.viaje-card {
-  background: var(--white);
-  border-radius: 26px;
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid var(--border-soft);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.viaje-img-wrap {
-  position: relative;
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-}
-
-.viaje-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.35s ease;
-}
-
-.viaje-card:hover .viaje-img {
-  transform: scale(1.04);
-}
-
-.viaje-badge {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  background: #84CCE4;
-  color: white;
-  font-size: 0.82rem;
-  font-weight: 700;
-  padding: 8px 14px;
-  border-radius: 999px;
-  letter-spacing: 0.2px;
-}
-
-.viaje-body {
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.viaje-titulo {
-  font-size: 1.45rem;
-  line-height: 1.2;
-  font-weight: 700;
-  margin: 0 0 10px;
-  color: var(--text-dark);
-}
-
-.viaje-ref {
-  font-size: 0.95rem;
-  color: var(--text-soft);
-  margin: 0 0 16px;
-}
-
-.viaje-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 18px;
-}
-
-.tag {
-  background: #fff3e8;
-  color: var(--brand-orange);
-  border: 1px solid #ffd7b5;
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 7px 12px;
-  border-radius: 999px;
-  text-transform: uppercase;
-}
-
-.viaje-desc {
-  font-size: 0.98rem;
-  color: #555;
-  line-height: 1.55;
-  margin: 0 0 18px;
-}
-
-.viaje-data {
-  margin-bottom: 24px;
-}
-
-.viaje-data p {
-  margin: 0 0 8px;
-  color: var(--brand-orange);
-  font-weight: 600;
-  font-size: 0.98rem;
-}
-
-.viaje-footer {
-  margin-top: auto;
-  display: flex;
-  gap: 18px;
-  align-items: end;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.precio-box {
-  display: flex;
-  flex-direction: column;
-}
-
-.precio-label {
-  font-size: 0.88rem;
-  color: var(--text-soft);
-  margin-bottom: 4px;
-}
-
-.precio {
-  font-size: 2.2rem;
-  line-height: 1;
-  font-weight: 800;
-  color: var(--text-dark);
-}
-
-.moneda {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-right: 6px;
-}
-
-.precio-sub {
-  margin-top: 6px;
-  color: var(--text-soft);
-  font-size: 0.88rem;
-  line-height: 1.2;
-}
-
-.btn-ver {
-  background: var(--brand-orange);
-  color: white;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: 14px 24px;
-  border-radius: 999px;
-  transition: background 0.25s ease, transform 0.2s ease;
-  white-space: nowrap;
-}
-
-.btn-ver:hover {
-  background: var(--brand-orange-dark);
-  transform: translateY(-1px);
-}
-
-/*================
-ICONOS CIRCULARES
-==================*/
-.viaje-icons {
-  display: flex;
-  gap: 14px;
-  margin: 18px 0;
-  flex-wrap: wrap;
-}
-
-.icon-circle {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: #F96E0C;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon-circle i {
-  color: white;
-}
-
-/* tablet */
-@media (max-width: 1100px) {
-  .viajes-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-/* mobile */
-@media (max-width: 700px) {
-  .viajes-section {
-    padding: 32px 16px 50px;
-  }
-
-  .viajes-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .viaje-img-wrap {
-    height: 220px;
-  }
-
-  .viaje-body {
-    padding: 18px;
-  }
-
-  .viaje-titulo {
-    font-size: 1.2rem;
-  }
-
-  .precio {
-    font-size: 1.8rem;
-  }
-
-  .btn-ver {
-    width: 100%;
-    text-align: center;
-  }
-
-  .viaje-footer {
-    align-items: stretch;
-  }
-}
-/* Mobile */
-@media (max-width: 760px){
-
-  .navbar{
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap; /* para que el menú baje debajo del nav */
-  }
-
-  .nav-toggle{
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* oculto el menú por defecto */
-  .menu{
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    gap: 14px;
-    margin-top: 12px;
-  }
-
-  /* cuando está abierto */
-  .menu.is-open{
-    display: flex;
   }
 }

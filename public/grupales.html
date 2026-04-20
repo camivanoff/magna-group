@@ -8,7 +8,10 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap"
+    rel="stylesheet"
+  />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -25,7 +28,8 @@
         </span>
       </a>
 
-      <button class="nav-toggle"
+      <button
+        class="nav-toggle"
         type="button"
         aria-label="Abrir menú"
         aria-controls="mainMenu"
@@ -55,164 +59,194 @@
       Elegí tu próximo destino en grupo · Cupos limitados
     </p>
 
-    <!-- ================= GRID DE VIAJES ================= -->
-    <section class="cards" aria-label="Listado de viajes grupales">
+    <!-- ================= NAVEGACIÓN RÁPIDA ================= -->
+    <div class="year-nav">
+      <a href="#year-2026">2026</a>
+      <a href="#year-2027">2027</a>
+    </div>
 
-      <!-- CARD 1 -->
-      <article class="card">
-        <img class="card__img" src="img/grupal5.jpg" alt="Viaje grupal a Turquía y Dubai abril" />
-        <div class="card__body">
-          <h3 class="card__title">Turquía y Dubai</h3>
-          <p class="card__text">16 días · Salida REPROGRAMADA</p>
-        </div>
-        <div class="card__footer">
-          <a class="card__btn" href="viaje.html?id=turquia-y-dubai-abril">Consultar</a>
-          <span class="card__price">USD 4.920</span>
-        </div>
-      </article>
+    <!-- ================= AÑO 2026 ================= -->
+    <section class="catalog-year" id="year-2026">
+      <h2 class="catalog-year__title">Salidas 2026</h2>
 
-      <!-- CARD 2 -->
-      <article class="card">
-        <img class="card__img" src="img/grupal7.jpg" alt="Alemania y Europa del Este grupal" />
-        <div class="card__body">
-          <h3 class="card__title">Alemania y Europa del Este</h3>
-          <p class="card__text">15 días · Salida 23/4</p>
-        </div>
-        <div class="card__footer">
-          <a class="card__btn" href="viaje.html?id=alemania-y-europa-del-este">Consultar</a>
-          <span class="card__price">USD 4.710</span>
-        </div>
-      </article>
+      <div class="cards" aria-label="Listado de viajes grupales 2026">
 
-      <!-- CARD 3 -->
-      <article class="card">
-        <img class="card__img" src="img/grupal2.jpeg" alt="España y Portugal grupal" />
-        <div class="card__body">
-          <h3 class="card__title">España y Portugal</h3>
-          <p class="card__text">17 días · Salida 3/5</p>
-        </div>
-        <div class="card__footer">
-          <a class="card__btn" href="viaje.html?id=ruta-iberica">Consultar</a>
-          <span class="card__price">USD 4.900</span>
-        </div>
-      </article>      
+        <!-- CARD 1 -->
+        <article class="card">
+          <img class="card__img" src="img/grupal5.jpg" alt="Viaje grupal a Turquía y Dubai abril" />
+          <div class="card__body">
+            <h3 class="card__title">Turquía y Dubai</h3>
+            <p class="card__text">16 días · Salida REPROGRAMADA</p>
+          </div>
+          <div class="card__footer">
+            <a class="card__btn" href="viaje.html?id=turquia-y-dubai-abril">Consultar</a>
+            <span class="card__price">USD 4.920</span>
+          </div>
+        </article>
 
-      <!-- CARD 4 -->
-      <article class="card">
-        <img class="card__img" src="img/grupal1.jpeg" alt="Viaje grupal a Japón" />
-        <div class="card__body">
-          <h3 class="card__title">Japón</h3>
-          <p class="card__text">19 días · Salida 30/8</p>
-        </div>
-        <div class="card__footer">
-          <a class="card__btn" href="viaje.html?id=japon">Consultar</a>
-          <span class="card__price">USD 8.500</span>
-        </div>
-      </article>
+        <!-- CARD 2 -->
+        <article class="card">
+          <img class="card__img" src="img/grupal7.jpg" alt="Alemania y Europa del Este grupal" />
+          <div class="card__body">
+            <h3 class="card__title">Alemania y Europa del Este</h3>
+            <p class="card__text">15 días · Salida 23/4</p>
+          </div>
+          <div class="card__footer">
+            <a class="card__btn" href="viaje.html?id=alemania-y-europa-del-este">Consultar</a>
+            <span class="card__price">USD 4.710</span>
+          </div>
+        </article>
 
-      <!-- CARD 5 -->
-      <article class="card">
-        <img class="card__img" src="img/grupal8.jpg" alt="Viaje grupal a Grecia septiembre" />
-        <div class="card__body">
-          <h3 class="card__title">Grecia</h3>
-          <p class="card__text">15 días · Salida 11/9</p>
-        </div>
-        <div class="card__footer">
-          <a class="card__btn" href="viaje.html?id=grecia-septiembre">Consultar</a>
-          <span class="card__price">USD 6.500</span>
-        </div>
-      </article>
+        <!-- CARD 3 -->
+        <article class="card">
+          <img class="card__img" src="img/grupal2.jpeg" alt="España y Portugal grupal" />
+          <div class="card__body">
+            <h3 class="card__title">España y Portugal</h3>
+            <p class="card__text">17 días · Salida 3/5</p>
+          </div>
+          <div class="card__footer">
+            <a class="card__btn" href="viaje.html?id=ruta-iberica">Consultar</a>
+            <span class="card__price">USD 4.900</span>
+          </div>
+        </article>
 
-      <!-- CARD 6 -->
-      <article class="card">
-        <img class="card__img" src="img/grupal9.jpg" alt="Viaje grupal a Turquía y Dubai septiembre" />
-        <div class="card__body">
-          <h3 class="card__title">Turquía y Dubai</h3>
-          <p class="card__text">18 días · Salida 19/9</p>
-        </div>
-        <div class="card__footer">
-          <a class="card__btn" href="viaje.html?id=turquia-y-dubai-septiembre">Consultar</a>
-          <span class="card__price">USD 4.920</span>
-        </div>
-      </article>
+        <!-- CARD 4 -->
+        <article class="card">
+          <img class="card__img" src="img/grupal1.jpeg" alt="Viaje grupal a Japón" />
+          <div class="card__body">
+            <h3 class="card__title">Japón</h3>
+            <p class="card__text">19 días · Salida 30/8</p>
+          </div>
+          <div class="card__footer">
+            <a class="card__btn" href="viaje.html?id=japon">Consultar</a>
+            <span class="card__price">USD 8.500</span>
+          </div>
+        </article>
 
-      <!-- CARD 7 -->
-      <article class="card">
-        <img class="card__img" src="img/grupal10.jpeg" alt="España, Italia, Francia y Suiza octubre" />
-        <div class="card__body">
-          <h3 class="card__title">España, Italia, Francia y Suiza</h3>
-          <p class="card__text">18 días · Salida 18/10</p>
-        </div>
-        <div class="card__footer">
-          <a class="card__btn" href="viaje.html?id=colores-de-mi-tierra-octubre">Consultar</a>
-          <span class="card__price">USD 4.760</span>
-        </div>
-      </article>
+        <!-- CARD 5 -->
+        <article class="card">
+          <img class="card__img" src="img/grupal8.jpg" alt="Viaje grupal a Grecia septiembre" />
+          <div class="card__body">
+            <h3 class="card__title">Grecia</h3>
+            <p class="card__text">15 días · Salida 11/9</p>
+          </div>
+          <div class="card__footer">
+            <a class="card__btn" href="viaje.html?id=grecia-septiembre">Consultar</a>
+            <span class="card__price">USD 6.500</span>
+          </div>
+        </article>
 
-      <!-- CARD 8 -->
-      <article class="card">
-        <img class="card__img" src="img/grupal11.jpg" alt="Turquia, Grecia y Egipto grupal" />
-        <div class="card__body">
-          <h3 class="card__title">Turquia, Grecia y Egipto</h3>
-          <p class="card__text">26 días · Salida 01/10</p>
-        </div>
-        <div class="card__footer">
-          <a class="card__btn" href="viaje.html?id=tesoros-milenarios">Consultar</a>
-          <span class="card__price">USD 8.250</span>
-        </div>
-      </article>
+        <!-- CARD 6 -->
+        <article class="card">
+          <img class="card__img" src="img/grupal9.jpg" alt="Viaje grupal a Turquía y Dubai septiembre" />
+          <div class="card__body">
+            <h3 class="card__title">Turquía y Dubai</h3>
+            <p class="card__text">18 días · Salida 19/9</p>
+          </div>
+          <div class="card__footer">
+            <a class="card__btn" href="viaje.html?id=turquia-y-dubai-septiembre">Consultar</a>
+            <span class="card__price">USD 4.920</span>
+          </div>
+        </article>
 
-      <!-- CARD 9 -->
-      <article class="card">
-        <img class="card__img" src="img/grupal12.jpeg" alt="Brasil para mujeres" />
-        <div class="card__body">
-          <h3 class="card__title">Brasil para mujeres</h3>
-          <p class="card__text">11 días · Salida 02/11</p>
-        </div>
-        <div class="card__footer">
-          <a class="card__btn" href="viaje.html?id=brasil-para-mujeres">Consultar</a>
-          <span class="card__price">Desde USD 2.050</span>
-        </div>
-      </article>      
+        <!-- CARD 7 -->
+        <article class="card">
+          <img class="card__img" src="img/grupal10.jpeg" alt="España, Italia, Francia y Suiza octubre" />
+          <div class="card__body">
+            <h3 class="card__title">España, Italia, Francia y Suiza</h3>
+            <p class="card__text">18 días · Salida 18/10</p>
+          </div>
+          <div class="card__footer">
+            <a class="card__btn" href="viaje.html?id=colores-de-mi-tierra-octubre">Consultar</a>
+            <span class="card__price">USD 4.760</span>
+          </div>
+        </article>
 
-      <!-- CARD 10 -->
-      <article class="card">
-        <img class="card__img" src="img/grupal13.jpeg" alt="Cataratas del Iguazú" />
-        <div class="card__body">
-          <h3 class="card__title">Cataratas del Iguazú</h3>
-          <p class="card__text">7 días · Salida 02/09</p>
-        </div>
-        <div class="card__footer">
-          <a class="card__btn" href="viaje.html?id=cataratas-del-iguazu">Consultar</a>
-          <span class="card__price">Desde USD 1.490</span>
-        </div>
-      </article>      
+        <!-- CARD 8 -->
+        <article class="card">
+          <img class="card__img" src="img/grupal11.jpg" alt="Turquia, Grecia y Egipto grupal" />
+          <div class="card__body">
+            <h3 class="card__title">Turquia, Grecia y Egipto</h3>
+            <p class="card__text">26 días · Salida 01/10</p>
+          </div>
+          <div class="card__footer">
+            <a class="card__btn" href="viaje.html?id=tesoros-milenarios">Consultar</a>
+            <span class="card__price">USD 8.250</span>
+          </div>
+        </article>
 
-      <!-- CARD 11 -->
-      <article class="card">
-        <img class="card__img" src="img/grupal14.jpeg" alt="Europa en 23 dias" />
-        <div class="card__body">
-          <h3 class="card__title">Europa en 23 días</h3>
-          <p class="card__text">23 días · Salida 07/03</p>
-        </div>
-        <div class="card__footer">
-          <a class="card__btn" href="viaje.html?id=europa-23-dias">Consultar</a>
-          <span class="card__price">USD 4.850</span>
-        </div>
-      </article>
+        <!-- CARD 9 -->
+        <article class="card">
+          <img class="card__img" src="img/grupal12.jpeg" alt="Brasil para mujeres" />
+          <div class="card__body">
+            <h3 class="card__title">Brasil para mujeres</h3>
+            <p class="card__text">11 días · Salida 02/11</p>
+          </div>
+          <div class="card__footer">
+            <a class="card__btn" href="viaje.html?id=brasil-para-mujeres">Consultar</a>
+            <span class="card__price">Desde USD 2.050</span>
+          </div>
+        </article>
 
-      <!-- CARD 12 -->      
-      <article class="card">
-        <img class="card__img" src="img/grupal15.jpeg" alt="India y Nepal" />
-        <div class="card__body">
-          <h3 class="card__title">India y Nepal</h3>
-          <p class="card__text">15 días · Salida 24/10</p>
-        </div>
-        <div class="card__footer">
-          <a class="card__btn" href="viaje.html?id=indiaynepal">Consultar</a>
-          <span class="card__price">USD 7.500</span>
-        </div>
-      </article>    
+        <!-- CARD 10 -->
+        <article class="card">
+          <img class="card__img" src="img/grupal13.jpeg" alt="Cataratas del Iguazú" />
+          <div class="card__body">
+            <h3 class="card__title">Cataratas del Iguazú</h3>
+            <p class="card__text">7 días · Salida 02/09</p>
+          </div>
+          <div class="card__footer">
+            <a class="card__btn" href="viaje.html?id=cataratas-del-iguazu">Consultar</a>
+            <span class="card__price">Desde USD 1.490</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ================= AÑO 2027 ================= -->
+    <section class="catalog-year" id="year-2027">
+      <h2 class="catalog-year__title">Salidas 2027</h2>
+
+      <div class="cards" aria-label="Listado de viajes grupales 2027">
+
+        <!-- CARD 11 -->
+        <article class="card">
+          <img class="card__img" src="img/grupal14.jpeg" alt="Europa en 23 dias 2027" />
+          <div class="card__body">
+            <h3 class="card__title">Europa en 23 días</h3>
+            <p class="card__text">23 días · Salida 07/03/2027</p>
+          </div>
+          <div class="card__footer">
+            <a class="card__btn" href="viaje.html?id=europa-23-dias">Consultar</a>
+            <span class="card__price">USD 4.850</span>
+          </div>
+        </article>
+
+        <!-- CARD 12 -->
+        <article class="card">
+          <img class="card__img" src="img/grupal15.jpeg" alt="India y Nepal 2027" />
+          <div class="card__body">
+            <h3 class="card__title">India y Nepal</h3>
+            <p class="card__text">15 días · Salida 24/10/2027</p>
+          </div>
+          <div class="card__footer">
+            <a class="card__btn" href="viaje.html?id=indiaynepal">Consultar</a>
+            <span class="card__price">USD 7.500</span>
+          </div>
+        </article>
+
+        <!--
+        ACÁ PODÉS IR AGREGANDO MÁS VIAJES DE 2027
+        copiando una card completa y cambiando:
+        - imagen
+        - título
+        - salida
+        - link
+        - precio
+        -->
+
+      </div>
     </section>
 
   </main>
@@ -237,21 +271,21 @@
         </a>
       </div>
 
-    <!-- QR Aval -->
-    <div class="footer__aval">
-      <p class="footer__aval-text">Agencia habilitada</p>
-      <img src="img/aval777.jpeg" alt="QR aval agencia" class="footer__qr">
-    </div>      
+      <!-- QR Aval -->
+      <div class="footer__aval">
+        <p class="footer__aval-text">Agencia habilitada</p>
+        <img src="img/aval777.jpeg" alt="QR aval agencia" class="footer__qr">
+      </div>
 
       <p class="footer__copy">© 2026 MAGNA GROUP</p>
 
     </div>
   </footer>
 
-  <!-- ✅ IMPORTANTE: scripts al final y con la ruta correcta -->
-<script defer src="/js/viajes-data.js"></script>
-<script defer src="/js/grupales.js"></script>
-<script defer src="/js/nav.js"></script>
+  <!-- Scripts -->
+  <script defer src="/js/viajes-data.js"></script>
+  <script defer src="/js/grupales.js"></script>
+  <script defer src="/js/nav.js"></script>
 
 </body>
 </html>
