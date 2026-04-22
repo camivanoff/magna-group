@@ -461,5 +461,41 @@ window.VIAJES = [
     whatsappText: "Hola! Quiero consultar por el viaje a Europa en 23 días."
   },
 
+  /*============================
+  GRUPALES 2027
+  ==============================*/
+{
+    id: "europa-en-invierno",
+    titulo: "Europa en Invierno",
+    imagenes: [
+      "/img/europainv1.jpeg",
+      "/img/europainv2.jpeg",
+      "/img/europainv3.jpeg",
+      "/img/europainv4.jpeg"
+    ],
+    duracion: "17 días",
+    salida: "5 de Febrero 2027",
+    precio: 4360,
+    tipo: "Viaje grupal acompañado",
+    descripcion: "Las grandes capitales europeas en un solo viaje.",
+    incluye: [
+    "Vuelos internacionales Montevideo – Madrid – Montevideo",
+    "Traslados aeropuerto / hotel / aeropuerto",
+    "17 noches de alojamiento en hoteles seleccionados con desayuno diario",
+    "Guía acompañante desde Montevideo (con mínimo de pasajeros)",
+    "Transporte en autobús durante todo el recorrido por Europa",
+    "Visitas panorámicas incluidas en Madrid, París, Florencia, Roma y Barcelona",
+    "Recorrido completo por España, Francia, Suiza e Italia",
+    "Paradas y visitas en ciudades emblemáticas como Burdeos, Blois, Lucerna, Zúrich, Verona, Pisa y Niza",
+    "Tiempo libre en varias ciudades para disfrutar a tu ritmo",
+    "Audioguías durante las visitas",
+    "Asistencia local durante todo el viaje",
+    "Seguro de asistencia en viaje",
+    ],
+    pdf: "/pdfs/europa-invierno-feb.pdf",
+    whatsappText: "Hola! Quiero consultar por el viaje a Europa en invierno."
+  },
+
+
 
 ];
