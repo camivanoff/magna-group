@@ -393,35 +393,6 @@ window.VIAJES = [
     whatsappText: "Hola! Quiero consultar por el viaje a Cataratas del Iguazú."
   },
 
-  {
-    id: "europa-23-dias",
-    titulo: "Europa en 23 dias",
-    imagenes: [
-      "/img/europa1.jpeg",
-      "/img/europa2.jpeg",
-      "/img/europa3.jpeg",
-      "/img/europa4.jpeg"
-    ],
-    duracion: "23 días",
-    salida: "7 de Marzo 2027",
-    precio: 4850,
-    tipo: "Viaje grupal acompañado",
-    descripcion: "Las grandes capitales europeas en un solo viaje.",
-    incluye: [
-        "Vuelos internacionales",
-        "Traslados incluidos",
-        "Guía desde Montevideo",
-        "21 noches de alojamiento",
-        "Desayunos diarios",
-        "Bus de larga distancia durante todo el recorrido",
-        "Guias locales en las principales ciudades",
-        "Visitas incluidas en Londres, París, Ámsterdam, Praga, Roma, Florencia y Madrid",
-        "Seguro de viaje"
-    ],
-    pdf: "/pdfs/europa-marzo.pdf",
-    whatsappText: "Hola! Quiero consultar por el viaje a Europa en 23 días."
-  },
-
     {
     id: "indiaynepal",
     titulo: "India y Nepal",
@@ -494,6 +465,81 @@ window.VIAJES = [
     ],
     pdf: "/pdfs/europa-invierno-feb.pdf",
     whatsappText: "Hola! Quiero consultar por el viaje a Europa en invierno."
+  },
+
+  {
+    id: "europa-23-dias",
+    titulo: "Europa en 23 dias",
+    imagenes: [
+      "/img/europa1.jpeg",
+      "/img/europa2.jpeg",
+      "/img/europa3.jpeg",
+      "/img/europa4.jpeg"
+    ],
+    duracion: "23 días",
+    salida: "7 de Marzo 2027",
+    precio: 4850,
+    tipo: "Viaje grupal acompañado",
+    descripcion: "Las grandes capitales europeas en un solo viaje.",
+    incluye: [
+        "Vuelos internacionales",
+        "Traslados incluidos",
+        "Guía desde Montevideo",
+        "21 noches de alojamiento",
+        "Desayunos diarios",
+        "Bus de larga distancia durante todo el recorrido",
+        "Guias locales en las principales ciudades",
+        "Visitas incluidas en Londres, París, Ámsterdam, Praga, Roma, Florencia y Madrid",
+        "Seguro de viaje"
+    ],
+    pdf: "/pdfs/europa-marzo.pdf",
+    whatsappText: "Hola! Quiero consultar por el viaje a Europa en 23 días."
+  },
+
+  {
+    id: "toda-españa",
+    titulo: "Toda España",
+    imagenes: [
+      "/img/todaespaña1.jpeg",
+      "/img/todaespaña2.jpeg",
+      "/img/todaespaña3.jpeg",
+      "/img/todaespaña4.jpeg"
+    ],
+    duracion: "16 días",
+    salida: "27 de Marzo 2027",
+    precio: 5900,
+    tipo: "Viaje grupal acompañado",
+    descripcion: "Vivi la magia de España en un solo viaje",
+    incluye: [
+      "Vuelos internacionales",
+      "Traslados aeropuerto / hotel / aeropuerto",
+      "14 noches de alojamiento en hoteles seleccionados con desayuno buffet",
+      "Guía acompañante desde Montevideo (con mínimo de pasajeros)",
+      "Transporte en autobús durante todo el recorrido por España",
+      "Guías locales en las principales ciudades: Madrid, Mérida, Sevilla, Córdoba, Granada, Valencia, Barcelona, Salamanca y Santiago de Compostela",
+      "Visitas panorámicas y recorridos guiados durante todo el itinerario",
+      "Sistema de audio individual en las visitas",
+      "Entrada al Teatro y Anfiteatro Romano de Mérida",
+      "Entrada a la Alhambra y Jardines del Generalife en Granada",
+      "Entrada a la Mezquita-Catedral de Córdo",
+      "Visita al Pueblo Español en Barcelona",
+      "Paseo por el recorrido del encierro de San Fermín en Pamplona",
+      "Cena de tapas en Madrid",
+      "Almuerzos incluidos en Toledo, Mérida, Sevilla, Barcelona y Covadonga",
+      "Cena en Barcelona",
+      "Cena de pintxos en Pamplona",
+      "Cena en Santiago de Compostela",
+      "Almuerzo o cena en Salamanca",
+      "Espectáculo de flamenco en Sevilla",
+      "Visita nocturna de Madrid",
+      "Excursión a Toledo",
+      "Recorrido completo por Andalucía, costa mediterránea y norte de España",
+      "Visita a Santiago de Compostela con guía local",
+      "Asistencia permanente durante todo el viaje",
+      "Seguro de asistencia en viaje",
+    ],
+    pdf: "/pdfs/todaespaña-marzo.pdf",
+    whatsappText: "Hola! Quiero consultar por el viaje a Toda España."
   },
 
 
