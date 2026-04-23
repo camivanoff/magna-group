@@ -617,4 +617,43 @@ window.VIAJES = [
     whatsappText: "Hola! Quiero consultar por el viaje a Grecia y Turquía."
   },
 
+  {
+    id: "reino-unido-irlanda",
+    titulo: "Reino Unido e Irlanda",
+    imagenes: [
+      "/img/greciaturquia1.jpeg",
+      "/img/greciaturquia2.jpeg",
+      "/img/greciaturquia3.jpeg",
+      "/img/greciaturquia4.jpeg"
+    ],
+    duracion: "15 días",
+    salida: "Junio 2027",
+    precio: 7790,
+    tipo: "Viaje grupal acompañado",
+    descripcion: "Castillos, leyendas y paisajes verdes infinitos",
+    incluye: [
+        "Vuelos internacionales",
+        "Guía acompañante desde Montevideo con un minimo de pasajeros",
+        "Traslados aeropuerto / hotel / aeropuerto",
+        "14 noches de alojamiento con desayuno",
+        "Transporte en autobús durante todo el recorrido",
+        "Ferry Cairnryan – Belfast",
+        "Ferry Dublín – Holyhead",
+        "Guía de habla hispana durante todo el circuito",
+        "Asistencia durante todo el viaje",
+        "5 cenas en hotel (Tierras Altas, Glasgow, Belfast, Sligo y Limerick)",
+        "City tour en Londres",
+        "Recorrido por York y su casco medieval",
+        "Visita a Edimburgo y su Royal Mile",
+        "Recorrido por las Tierras Altas de Escocia",
+        "Paseo en barco por el Lago Ness",
+        "Visita a Belfast y Dublín",
+        "Recorrido por Galway, Liverpool, Oxford y Stratford-upon-Avon",
+        "Entradas incluidas a Castillo de Alnwick, Castillo de Edimburgo, Destilería de whisky con degustación, Calzada del Gigante, Acantilados de Moher, Roca de Cashel",
+        "Seguro de viaje",
+    ],
+    pdf: "/pdfs/reinounido-junio.pdf",
+    whatsappText: "Hola! Quiero consultar por el viaje a Reino Unido e Irlanda."
+  },
+
 ];
