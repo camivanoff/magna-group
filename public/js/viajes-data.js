@@ -656,4 +656,46 @@ window.VIAJES = [
     whatsappText: "Hola! Quiero consultar por el viaje a Reino Unido e Irlanda."
   },
 
+  {
+    id: "escandinavia",
+    titulo: "Noruega, Suecia y Bálticos",
+    imagenes: [
+      "/img/reinounido1.jpeg",
+      "/img/reinounido2.jpeg",
+      "/img/reinounido3.jpeg",
+      "/img/reinounido4.jpeg"
+    ],
+    duracion: "17 días",
+    salida: "Agosto 2027",
+    precio: 8320,
+    tipo: "Viaje grupal acompañado",
+    descripcion: "Fiordos imponentes, ciudades nórdicas y joyas medievales del Báltico en un recorrido únicos.",
+    incluye: [
+        "Vuelos internacionales",
+        "Guía acompañante desde Montevideo con un minimo de pasajeros",
+        "Traslados aeropuerto / hotel / aeropuerto",
+        "Alojamiento con desayuno buffet durante todo el recorrido",
+        "Bus de lujo durante todo el circuito",
+        "Crucero por el fiordo de Sognefjord",
+        "Crucero por el fiordo de Geiranger",
+        "Crucero nocturno Estocolmo – Helsinki (cabinas interiores)",
+        "Ferry Helsinki – Tallin",
+        "Guía acompañante profesional durante todo el recorrido",
+        "Guías locales en Bergen, Oslo, Estocolmo, Helsinki, Tallin, Riga y Vilnius",
+        "Asistencia durante todo el viaje",
+        "Tasas de estancia",
+        "Recorrido por la región de los fiordos noruegos",
+        "Visita al Glaciar Briksdal",
+        "Subida en funicular al Monte Floyen en Bergen",
+        "Recorrido en el Tren Flamsbana",
+        "Visita al Parque Frogner en Oslo",
+        "Paseo por Gamla Stan en Estocolmo",
+        "Descubrimiento de las capitales bálticas: Tallin, Riga y Vilnius",
+        "Entradas incluidas al Museo Folklórico de Oslo y Barco Polar Fram, Museo Vasa y Ayuntamiento de Estocolmo, Catedral y edificios históricos en Tallin, Universidad de Vilnius, Palacio de Rundale",
+        "Seguro de viaje",
+    ],
+    pdf: "/pdfs/escandinavia-agosto.pdf",
+    whatsappText: "Hola! Quiero consultar por el viaje a Noruega, Suecia y Bálticos."
+  },
+
 ];
