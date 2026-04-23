@@ -492,7 +492,7 @@ window.VIAJES = [
         "Asistencia durante todo el viaje",
         "Audioguías durante las visitas",
         "City tour en Londres",
-        "Visita panorámica de París"
+        "Visita panorámica de París",
         "Recorrido por Ámsterdam",
         "Visita a Praga",
         "City tour en Roma",
