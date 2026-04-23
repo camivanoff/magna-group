@@ -621,10 +621,10 @@ window.VIAJES = [
     id: "reino-unido-irlanda",
     titulo: "Reino Unido e Irlanda",
     imagenes: [
-      "/img/greciaturquia1.jpeg",
-      "/img/greciaturquia2.jpeg",
-      "/img/greciaturquia3.jpeg",
-      "/img/greciaturquia4.jpeg"
+      "/img/reinounido1.jpeg",
+      "/img/reinounido2.jpeg",
+      "/img/reinounido3.jpeg",
+      "/img/reinounido4.jpeg"
     ],
     duracion: "15 días",
     salida: "Junio 2027",
