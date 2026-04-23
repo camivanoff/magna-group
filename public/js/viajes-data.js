@@ -542,6 +542,39 @@ window.VIAJES = [
     whatsappText: "Hola! Quiero consultar por el viaje a Toda España."
   },
 
+  {
+    id: "españa-portugal",
+    titulo: "España y Portugal",
+    imagenes: [
+      "/img/todaespaña1.jpeg",
+      "/img/todaespaña2.jpeg",
+      "/img/todaespaña3.jpeg",
+      "/img/todaespaña4.jpeg"
+    ],
+    duracion: "18 días",
+    salida: "Abril 2027",
+    precio: 5900,
+    tipo: "Viaje grupal acompañado",
+    descripcion: "España y Portugal combinan historia, cultura y gastronomía.",
+    incluye: [
+        "Vuelos internacionales Montevideo – Madrid / Lisboa – Montevideo",
+        "Traslados aeropuerto / hotel / aeropuerto",
+        "16 noches de alojamiento en hoteles seleccionados con desayuno buffet",
+        "Guía acompañante desde Montevideo durante todo el recorrido (con mínimo de pasajeros)",
+        "Transporte en autobús de turismo durante todo el circuito",
+        "Guías locales en las principales ciudades: Madrid, Mérida, Sevilla, Córdoba, Granada, Valencia, Barcelona, Santiago de Compostela, Oporto y Lisboa",
+        "Visitas panorámicas y recorridos guiados durante todo el itinerario",
+        "Sistema de audio individual en las visitas",
+        "Teatro y Anfiteatro Romano de Mérida",
+        "Alhambra y Jardines del Generalife en Granada (sujeto a emisión anticipada)",
+        "Mezquita – Catedral de Córdoba",
+        "Circuito completo por España y Portugal, Andalucía, costa mediterránea",
+        "Ciudades icónicas como Madrid, Sevilla, Granada, Barcelona, Santiago, Oporto y Lisboa",
+        "Paradas en destinos tradicionales como Mérida, Zaragoza, Pamplona, Covadonga, Aveiro y Fátima",
+    ],
+    pdf: "/pdfs/españaportugal-abril.pdf",
+    whatsappText: "Hola! Quiero consultar por el viaje a España y Portugal en Abril."
+  },
 
 
 ];
