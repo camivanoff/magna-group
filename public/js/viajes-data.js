@@ -576,5 +576,45 @@ window.VIAJES = [
     whatsappText: "Hola! Quiero consultar por el viaje a España y Portugal en Abril."
   },
 
+  {
+    id: "grecia-turquia",
+    titulo: "Grecia y Turquía",
+    imagenes: [
+      "/img/greciaturquia1.jpeg",
+      "/img/greciaturquia2.jpeg",
+      "/img/greciaturquia3.jpeg",
+      "/img/greciaturquia4.jpeg"
+    ],
+    duracion: "15 días",
+    salida: "Mayo 2027",
+    precio: 7750,
+    tipo: "Viaje grupal acompañado",
+    descripcion: "Grecia y Turquía combinan historia milenaria, paisajes únicos y culturas fascinantes.",
+    incluye: [
+        "Vuelos internacionales",
+        "Guía acompañante desde Montevideo con un mínimo de pasajeros",
+        "Traslados aeropuerto / hotel / aeropuerto",
+        "2 noches en Atenas con desayuno",
+        "2 noches en Mykonos con desayuno",
+        "2 noches en Santorini con desayuno",
+        "3 noches en Estambul con desayuno",
+        "Circuito por Turquía de 6 días / 5 noches en media pensión", 
+        "Ferry Atenas – Mykonos – Santorini",
+        "Tren de alta velocidad Estambul – Ankara",
+        "Vuelo interno Esmirna – Estambul (equipaje incluido)",
+        "Transporte terrestre en bus con aire acondicionado durante el circuito",
+        "City tour en Atenas con visita a la Acrópolis",
+        "2 visitas de día completo en Estambul con almuerzo incluido",
+        "Recorrido por Ankara, Capadocia, Pamukkale, Éfeso y Kusadasi",
+        "Paseo en barco por el Bósforo",
+        "Visita a barrios tradicionales y bazares en Estambul", 
+        "Entradas incluidas a Acrópolis de Atenas, Palacio de Topkapi (exterior Santa Sofía), Mezquita Azul e Hipódromo, Ruinas de Éfeso, Museos y sitios históricos según itinerario", 
+        "Guías de habla hispana durante las visitas",
+        "Guía acompañante durante el circuito por Turquía",
+        "Seguro de asistencia en viaje",
+    ],
+    pdf: "/pdfs/greciaturquia-mayo.pdf",
+    whatsappText: "Hola! Quiero consultar por el viaje a Grecia y Turquía."
+  },
 
 ];
