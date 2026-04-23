@@ -660,10 +660,10 @@ window.VIAJES = [
     id: "escandinavia",
     titulo: "Noruega, Suecia y Bálticos",
     imagenes: [
-      "/img/reinounido1.jpeg",
-      "/img/reinounido2.jpeg",
-      "/img/reinounido3.jpeg",
-      "/img/reinounido4.jpeg"
+      "/img/escandinavia1.jpeg",
+      "/img/escandinavia2.jpeg",
+      "/img/escandinavia3.jpeg",
+      "/img/escandinavia4.jpeg"
     ],
     duracion: "17 días",
     salida: "Agosto 2027",
