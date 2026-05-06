@@ -1314,38 +1314,29 @@ a{ color: inherit; }
   color: white;
 }
 
-.icono-servicio {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icono-servicio span {
+/* oculto por defecto */
+.icon-circle span {
   position: absolute;
-  bottom: -38px;
+  bottom: -35px;
   left: 50%;
   transform: translateX(-50%);
   background: #222;
   color: #fff;
   font-size: 13px;
-  font-weight: 500;
   padding: 6px 10px;
   border-radius: 8px;
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
   transition: all 0.25s ease;
-  z-index: 20;
 }
 
-.icono-servicio:hover span {
+/* aparece al pasar el mouse */
+.icon-circle:hover span {
   opacity: 1;
   visibility: visible;
-  bottom: -44px;
+  bottom: -42px;
 }
-
 /* =========================
    RESPONSIVE
 ========================= */
