@@ -1298,6 +1298,7 @@ a{ color: inherit; }
   gap: 14px;
   margin: 18px 0;
   flex-wrap: wrap;
+  overflow: visible;
 }
 
 .icon-circle{
@@ -1308,12 +1309,14 @@ a{ color: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: visible;
+  cursor: pointer;
 }
 
-/* oculto por defecto */
 .icon-circle span {
   position: absolute;
-  bottom: -35px;
+  bottom: -42px;
   left: 50%;
   transform: translateX(-50%);
   background: #222;
@@ -1325,19 +1328,18 @@ a{ color: inherit; }
   opacity: 0;
   visibility: hidden;
   transition: all 0.25s ease;
+  z-index: 9999;
 }
 
-/* aparece al pasar el mouse */
 .icon-circle:hover span {
   opacity: 1;
   visibility: visible;
-  bottom: -42px;
+  bottom: -48px;
 }
 
 .icon-circle i{
   color: white;
 }
-
 /* =========================
    RESPONSIVE
 ========================= */
