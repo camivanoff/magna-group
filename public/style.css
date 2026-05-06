@@ -1310,10 +1310,6 @@ a{ color: inherit; }
   justify-content: center;
 }
 
-.icon-circle i{
-  color: white;
-}
-
 /* oculto por defecto */
 .icon-circle span {
   position: absolute;
@@ -1337,6 +1333,11 @@ a{ color: inherit; }
   visibility: visible;
   bottom: -42px;
 }
+
+.icon-circle i{
+  color: white;
+}
+
 /* =========================
    RESPONSIVE
 ========================= */
