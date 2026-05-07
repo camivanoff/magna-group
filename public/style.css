@@ -1149,7 +1149,7 @@ a{ color: inherit; }
 .viaje-img-wrap{
   position: relative;
   width: 100%;
-  height: 180px;
+  height: 230px;
   overflow: hidden;
 }
 
@@ -1157,12 +1157,16 @@ a{ color: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
-  transition: transform 0.35s ease;
 }
 
 .viaje-card:hover .viaje-img{
   transform: scale(1.04);
+}
+
+.viaje-card:first-child .viaje-img{
+  object-position: center top;
 }
 
 .viaje-badge{
